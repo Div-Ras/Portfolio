@@ -1,245 +1,470 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="From fragments to flow: A user-centred media architecture approach to connect disconnected urban spaces — thesis case study by Divya Rastogi." />
-  <title>From fragments to flow — Divya Rastogi</title>
-  <link rel="stylesheet" href="../css/tokens.css" />
-  <link rel="stylesheet" href="../css/base.css" />
-  <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/layout.css" />
-  <link rel="stylesheet" href="../css/animations.css" />
-  <link rel="stylesheet" href="../css/project.css" />
-</head>
-<body id="top">
-<div class="grain" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="From fragments to flow: A user-centred media architecture approach to connect disconnected urban spaces — thesis case study by Divya Rastogi."
+    />
+    <title>From fragments to flow — Divya Rastogi</title>
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+  </head>
+  <body id="top">
+    <div class="grain" aria-hidden="true"></div>
 
-<header class="navbar" role="banner">
-  <div class="container navbar__inner">
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="../index.html" class="navbar__link active">Work</a>
-      <a href="../about.html" class="navbar__link">About</a>
-      <a href="../contact.html" class="navbar__link">Contact</a>
+    <header class="navbar" role="banner">
+      <div class="container navbar__inner">
+        <nav class="navbar__nav" aria-label="Primary navigation">
+          <a href="../index.html" class="navbar__link active">Work</a>
+          <a href="../about.html" class="navbar__link">About</a>
+          <a href="../contact.html" class="navbar__link">Contact</a>
+        </nav>
+        <button
+          class="navbar__hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="navbar__mobile" aria-label="Mobile navigation">
+      <a href="../index.html" class="navbar__mobile-link">Work</a>
+      <a href="../about.html" class="navbar__mobile-link">About</a>
+      <a href="../contact.html" class="navbar__mobile-link">Contact</a>
     </nav>
-    <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav class="navbar__mobile" aria-label="Mobile navigation">
-  <a href="../index.html" class="navbar__mobile-link">Work</a>
-  <a href="../about.html" class="navbar__mobile-link">About</a>
-  <a href="../contact.html" class="navbar__mobile-link">Contact</a>
-</nav>
 
-<main>
-  <section class="project-breadcrumb">
-    <div class="container">
-      <a href="../index.html#selected-work" class="project-breadcrumb__link"><span class="project-breadcrumb__arrow">←</span> Back to Work</a>
-    </div>
-  </section>
+    <main>
+      <section class="project-breadcrumb">
+        <div class="container">
+          <a href="../index.html#selected-work" class="project-breadcrumb__link"
+            ><span class="project-breadcrumb__arrow">←</span> Back to Work</a
+          >
+        </div>
+      </section>
 
-  <section class="project-hero thesis-feature">
-    <div class="container">
-      <div class="project-hero__meta reveal">
-        <span class="tag">Master’s Thesis</span>
-        <span class="tag">UX Research</span>
-        <span class="tag">Media Architecture</span>
-      </div>
-      <h1 class="project-hero__title reveal">From fragments to flow</h1>
-      <p class="project-hero__sub reveal">A user-centred media architecture thesis exploring how fragmented urban spaces can feel more connected, memorable, and human.</p>
-      <p class="project-hero__intro reveal">This project became my way of bringing together architecture, UX research, and interaction design. Set around Kurilpa Bridge in Brisbane, it looks at how small moments of light, sound, and participation can shift a place from being just a route into something people notice, remember, and quietly share.</p>
-      <div class="project-hero__stats reveal">
-        <div class="project-stat"><span class="project-stat__label">Type</span><span class="project-stat__value">Master’s Thesis</span></div>
-        <div class="project-stat"><span class="project-stat__label">Duration</span><span class="project-stat__value">1 Year</span></div>
-        <div class="project-stat"><span class="project-stat__label">Site</span><span class="project-stat__value">Kurilpa Bridge, Brisbane</span></div>
-        <div class="project-stat"><span class="project-stat__label">Prototype</span><span class="project-stat__value">Residues of Passage</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-cover">
-    <div class="container">
-      <img src="../assets/thesis-project-snapshot.jpg" alt="Thesis project snapshot showing research, publication, and site selection materials" class="project-cover__img reveal" />
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="project-content">
-
-        <section class="project-content__body reveal">
-          <h2 class="project-content__heading">Project <em>Snapshot</em></h2>
-          <div class="project-overview-table">
-            <div class="project-overview-row"><span class="project-overview-key">Role</span><span class="project-overview-val">UX Researcher · Interaction Designer · Prototype Developer</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Context</span><span class="project-overview-val">Master of Interaction Design thesis, The University of Queensland</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Duration</span><span class="project-overview-val">1 Year</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Methods</span><span class="project-overview-val">Contextual inquiry, site observation, behavioural mapping, proxemic analysis, interviews, prototyping, survey, design discussion</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Tools</span><span class="project-overview-val">Qualtrics, Google Colab, HTML, CSS, JavaScript, physical prototyping, light-and-sound interaction</span></div>
+      <section class="project-hero thesis-feature">
+        <div class="container">
+          <div class="project-hero__meta reveal">
+            <span class="tag">Master’s Thesis</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Media Architecture</span>
           </div>
-        </section>
-
-        <section class="project-content__body reveal" id="overview">
-          <h2 class="project-content__heading">Overview</h2>
-          <p>This thesis looks at urban fragmentation through everyday experience. I focused on Kurilpa Bridge in Brisbane because it is physically well connected, but people often use it as a crossing rather than a place to pause or connect.</p>
-          <p>Using a Research through Design approach, I moved from site observations and interviews into concept development, prototyping, and evaluation. The final prototype, <strong>Residues of Passage</strong>, uses light, sound, and anonymous audio traces to make passing experiences feel more visible over time.</p>
-        </section>
-
-        <section class="project-content__body reveal">
-          <div class="thesis-sequence-frame" aria-label="Animated sequence showing concept development changes">
-            <img src="../assets/thesis-sequence-2.png" alt="Concept development sequence stage 1" class="thesis-sequence-img thesis-sequence-img--1" />
-            <img src="../assets/thesis-sequence-1.png" alt="Concept development sequence stage 2" class="thesis-sequence-img thesis-sequence-img--2" />
-            <img src="../assets/thesis-sequence-3.png" alt="Concept development sequence stage 3" class="thesis-sequence-img thesis-sequence-img--3" />
-            <img src="../assets/thesis-sequence-4.png" alt="Concept development sequence stage 4" class="thesis-sequence-img thesis-sequence-img--4" />
-          </div>
-        </section>
-
-        <section class="project-content__body reveal" id="challenge">
-          <h2 class="project-content__heading">Challenge</h2>
-          <p>The challenge was to design for a space that people already move through quickly. I did not want to force people to stop or turn the bridge into a spectacle. The aim was to create a small, low-pressure invitation that could sit within the existing rhythm of the site.</p>
-          <p>That shaped the project direction: subtle, site-responsive, and easy to approach. The interaction had to feel calm enough for a public space, but meaningful enough to suggest that someone else had been there before.</p>
-        </section>
-
-        <section class="project-content__body reveal" id="research">
-          <h2 class="project-content__heading">Research &amp; <em>Insight</em></h2>
-          <p>I began with contextual inquiry at Kurilpa Bridge, combining site observation, behavioural mapping, proxemic thinking, and short interviews. I paid attention to movement, pause points, sensory qualities, and the small behaviours that often get missed in public-space research.</p>
-          <p>The clearest insight was that the bridge is not empty. People notice the view, wind, light, and other passers-by, but usually only briefly. The opportunity was to work with those small moments instead of trying to redesign the whole place.</p>
-          <div class="project-quote">
-            <p>The opportunity was not to make the bridge a destination. It was to gently amplify the traces of presence already moving through it.</p>
-          </div>
-        </section>
-
-        <section class="project-content__body reveal">
-          <figure class="project-stage-frame">
-            <img src="../assets/thesis-stage-understand-design-evaluate.png" alt="Stage 1 and Stage 2 research and design process diagram" class="project-stage-image" />
-          </figure>
-        </section>
-<section class="project-content__body reveal">
-          <figure class="project-research-frame">
-            <img src="../assets/thesis-site-selection.png" alt="Site selection diagram for research and insight" class="project-research-image" />
-          </figure>
-        </section>
-
-        <section class="project-content__body reveal" id="concept">
-          <h2 class="project-content__heading">Concept Development — <em>Residues of Passage</em></h2>
-          <p><strong>Residues of Passage</strong> turns the research into a light-and-sound prototype. The idea is simple: people can encounter short audio traces left by others, and optionally leave their own trace behind.</p>
-          <p>The prototype takes the form of a glowing orb. It is designed for short, public encounters: notice the glow, come closer, listen, and decide whether to contribute. Nothing is forced.</p>
-        </section>
-
-        <section class="project-content__body reveal">
-          <figure class="project-concept-frame">
-            <img src="../assets/thesis-concept-sketch.png" alt="Concept sketch showing the installation idea at Kurilpa Bridge" class="project-concept-image" />
-          </figure>
-        </section>
-
-        <section class="project-content__body reveal" id="interaction">
-          <h2 class="project-content__heading">Interaction Design</h2>
-          <p>The interaction is intentionally simple. A person hears a trace from someone who is not physically there, but still feels present through sound and light.</p>
-          <p>I liked that this created a quieter form of participation. It does not ask strangers to perform or speak to each other directly; it simply lets small contributions build a shared atmosphere over time.</p>
-        </section>
-
-        <section class="project-content__body reveal">
-          <figure class="project-framework-frame">
-            <img src="../assets/thesis-conceptual-framework.png" alt="Conceptual framework diagram for the thesis" class="project-framework-image" />
-          </figure>
-        </section>
-
-        <section class="project-content__body reveal">
-          <div class="project-image-placeholder">Image Placeholder — Interaction Flow / User Journey</div>
-        </section>
-
-        <section class="project-content__body reveal" id="prototype">
-          <h2 class="project-content__heading">Prototype Development</h2>
-          <p>The prototype brought together the orb form, responsive light, audio playback, and a QR-based contribution pathway. It was built as a research artefact, not a final public installation, so I could test the idea and learn what needed to be clearer.</p>
-          <p>The build helped me understand both the promise and the limits of the concept. Future development would need to consider durability, weatherproofing, privacy, moderation, accessibility, and how people would understand the contribution process in a real public setting.</p>
-        </section>
-
-        <section class="project-content__body reveal">
-          <div class="prototype-gallery-frame">
-            <div class="prototype-gallery">
-              <figure class="prototype-gallery__item"><img src="../assets/thesis-prototype-1.png" alt="Prototype image 1" class="prototype-gallery__image" /></figure>
-              <figure class="prototype-gallery__item"><img src="../assets/thesis-prototype-2.jpg" alt="Prototype image 2" class="prototype-gallery__image" /></figure>
-              <figure class="prototype-gallery__item"><img src="../assets/thesis-prototype-3.jpg" alt="Prototype image 3" class="prototype-gallery__image" /></figure>
-              <figure class="prototype-gallery__item"><img src="../assets/thesis-prototype-4.jpg" alt="Prototype image 4" class="prototype-gallery__image" /></figure>
+          <h1 class="project-hero__title reveal">From fragments to flow</h1>
+          <p class="project-hero__sub reveal">
+            A user-centred media architecture thesis exploring how fragmented
+            urban spaces can feel more connected, memorable, and human.
+          </p>
+          <p class="project-hero__intro reveal">
+            This project became my way of bringing together architecture, UX
+            research, and interaction design. Set around Kurilpa Bridge in
+            Brisbane, it looks at how small moments of light, sound, and
+            participation can shift a place from being just a route into
+            something people notice, remember, and quietly share.
+          </p>
+          <div class="project-hero__stats reveal">
+            <div class="project-stat">
+              <span class="project-stat__label">Type</span
+              ><span class="project-stat__value">Master’s Thesis</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Duration</span
+              ><span class="project-stat__value">1 Year</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Site</span
+              ><span class="project-stat__value">Kurilpa Bridge, Brisbane</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Prototype</span
+              ><span class="project-stat__value">Residues of Passage</span>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="project-content__body reveal" id="evaluation">
-          <h2 class="project-content__heading">Evaluation &amp; Findings</h2>
-          <p>I evaluated the prototype through a small mixed-method study using a short survey, design discussions, and observation notes. I focused on how people approached the object, what felt clear, and what made the interaction meaningful.</p>
-          <p>People were drawn to the object and the light first. The audio became meaningful when they realised it represented another person’s trace. That finding was important because it showed that the social meaning needed to be made clear without over-explaining it.</p>
-        </section>
-<section class="project-content__body reveal" id="outcome">
-          <h2 class="project-content__heading">Outcome</h2>
-          <p>This project showed me how media architecture can work best when it respects the pace and character of a place. <strong>Residues of Passage</strong> is not about making a bridge busier or louder; it is about making small traces of presence easier to notice.</p>
-          <p>The final thesis brings together spatial research, interaction clarity, sensory engagement, participation, and practical deployment considerations into a user-centred media architecture framework.</p>
-        </section>
-</div>
-    </div>
-  </section>
+      <section class="project-cover">
+        <div class="container">
+          <img
+            src="../assets/thesis-project-snapshot.jpg"
+            alt="Thesis project snapshot showing research, publication, and site selection materials"
+            class="project-cover__img reveal"
+          />
+        </div>
+      </section>
 
-  <nav class="project-nav" aria-label="Project navigation">
-    <div class="container project-nav__inner project-nav__inner--three">
-      <a class="project-nav__back" href="heritage-systems-map.html">
-        <span class="project-nav__eyebrow">Previous Project</span>
-        <span class="project-nav__label">← Cultural Heritage Systems Map</span>
-      </a>
-      <a class="project-nav__top btn btn-outline" href="#top">Back to Top</a>
-      <a class="project-nav__next" href="play-palooza.html">
-        <span class="project-nav__eyebrow">Next Project</span>
-        <span class="project-nav__label">Play Palooza →</span>
-      </a>
-    </div>
-  </nav>
-</main>
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="project-content">
+            <section class="project-content__body reveal">
+              <h2 class="project-content__heading">
+                Project <em>Snapshot</em>
+              </h2>
+              <div class="project-overview-table">
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Role</span
+                  ><span class="project-overview-val"
+                    >UX Researcher · Interaction Designer · Prototype
+                    Developer</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Context</span
+                  ><span class="project-overview-val"
+                    >Master of Interaction Design thesis, The University of
+                    Queensland</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Duration</span
+                  ><span class="project-overview-val">1 Year</span>
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Methods</span
+                  ><span class="project-overview-val"
+                    >Contextual inquiry, site observation, behavioural mapping,
+                    proxemic analysis, interviews, prototyping, survey, design
+                    discussion</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Tools</span
+                  ><span class="project-overview-val"
+                    >Qualtrics, Google Colab, HTML, CSS, JavaScript, physical
+                    prototyping, light-and-sound interaction</span
+                  >
+                </div>
+              </div>
+            </section>
 
-<footer class="footer footer-simple">
-  <div class="container footer-simple__grid">
-    <div class="footer-simple__col">
-      <h3>Contact Me <span aria-hidden="true">💌</span></h3>
-      <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
-    </div>
+            <section class="project-content__body reveal" id="overview">
+              <h2 class="project-content__heading">Overview</h2>
+              <p>
+                This thesis looks at urban fragmentation through everyday
+                experience. I focused on Kurilpa Bridge in Brisbane because it
+                is physically well connected, but people often use it as a
+                crossing rather than a place to pause or connect.
+              </p>
+              <p>
+                Using a Research through Design approach, I moved from site
+                observations and interviews into concept development,
+                prototyping, and evaluation. The final prototype,
+                <strong>Residues of Passage</strong>, uses light, sound, and
+                anonymous audio traces to make passing experiences feel more
+                visible over time.
+              </p>
+            </section>
 
-    <div class="footer-simple__col">
-      <h3>Let’s Connect <span aria-hidden="true">💫</span></h3>
-      <a href="https://www.linkedin.com/in/divya-rastogi-633091a8/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+            <section class="project-content__body reveal">
+              <div
+                class="thesis-sequence-frame"
+                aria-label="Animated sequence showing concept development changes"
+              >
+                <img
+                  src="../assets/thesis-sequence-2.png"
+                  alt="Concept development sequence stage 1"
+                  class="thesis-sequence-img thesis-sequence-img--1"
+                />
+                <img
+                  src="../assets/thesis-sequence-1.png"
+                  alt="Concept development sequence stage 2"
+                  class="thesis-sequence-img thesis-sequence-img--2"
+                />
+                <img
+                  src="../assets/thesis-sequence-3.png"
+                  alt="Concept development sequence stage 3"
+                  class="thesis-sequence-img thesis-sequence-img--3"
+                />
+                <img
+                  src="../assets/thesis-sequence-4.png"
+                  alt="Concept development sequence stage 4"
+                  class="thesis-sequence-img thesis-sequence-img--4"
+                />
+              </div>
+            </section>
 
-    <div class="footer-simple__col">
-      <h3>Designed &amp; made by Divya Rastogi <span aria-hidden="true">✨</span></h3>
-      <p>© 2026 Original Work</p>
-    </div>
-  </div>
-</footer>
+            <section class="project-content__body reveal" id="challenge">
+              <h2 class="project-content__heading">Challenge</h2>
+              <p>
+                The challenge was to design for a space that people already move
+                through quickly. I did not want to force people to stop or turn
+                the bridge into a spectacle. The aim was to create a small,
+                low-pressure invitation that could sit within the existing
+                rhythm of the site.
+              </p>
+              <p>
+                That shaped the project direction: subtle, site-responsive, and
+                easy to approach. The interaction had to feel calm enough for a
+                public space, but meaningful enough to suggest that someone else
+                had been there before.
+              </p>
+            </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var frame = document.querySelector('.thesis-sequence-frame');
-    if (!frame) return;
+            <section class="project-content__body reveal" id="research">
+              <h2 class="project-content__heading">
+                Research &amp; <em>Insight</em>
+              </h2>
+              <p>
+                I began with contextual inquiry at Kurilpa Bridge, combining
+                site observation, behavioural mapping, proxemic thinking, and
+                short interviews. I paid attention to movement, pause points,
+                sensory qualities, and the small behaviours that often get
+                missed in public-space research.
+              </p>
+              <p>
+                The clearest insight was that the bridge is not empty. People
+                notice the view, wind, light, and other passers-by, but usually
+                only briefly. The opportunity was to work with those small
+                moments instead of trying to redesign the whole place.
+              </p>
+              <div class="project-quote">
+                <p>
+                  The opportunity was not to make the bridge a destination. It
+                  was to gently amplify the traces of presence already moving
+                  through it.
+                </p>
+              </div>
+            </section>
 
-    var images = Array.from(frame.querySelectorAll('.thesis-sequence-img'));
-    if (!images.length) return;
+            <section class="project-content__body reveal">
+              <figure class="project-stage-frame">
+                <img
+                  src="../assets/thesis-stage-understand-design-evaluate.png"
+                  alt="Stage 1 and Stage 2 research and design process diagram"
+                  class="project-stage-image"
+                />
+              </figure>
+            </section>
+            <section class="project-content__body reveal">
+              <figure class="project-research-frame">
+                <img
+                  src="../assets/thesis-site-selection.png"
+                  alt="Site selection diagram for research and insight"
+                  class="project-research-image"
+                />
+              </figure>
+            </section>
 
-    var index = 0;
-    frame.classList.add('js-ready');
+            <section class="project-content__body reveal" id="concept">
+              <h2 class="project-content__heading">
+                Concept Development — <em>Residues of Passage</em>
+              </h2>
+              <p>
+                <strong>Residues of Passage</strong> turns the research into a
+                light-and-sound prototype. The idea is simple: people can
+                encounter short audio traces left by others, and optionally
+                leave their own trace behind.
+              </p>
+              <p>
+                The prototype takes the form of a glowing orb. It is designed
+                for short, public encounters: notice the glow, come closer,
+                listen, and decide whether to contribute. Nothing is forced.
+              </p>
+            </section>
 
-    function showImage(nextIndex) {
-      images.forEach(function (img, i) {
-        img.classList.toggle('is-active', i === nextIndex);
+            <section class="project-content__body reveal">
+              <figure class="project-concept-frame">
+                <img
+                  src="../assets/thesis-concept-sketch.png"
+                  alt="Concept sketch showing the installation idea at Kurilpa Bridge"
+                  class="project-concept-image"
+                />
+              </figure>
+            </section>
+
+            <section class="project-content__body reveal" id="interaction">
+              <h2 class="project-content__heading">Interaction Design</h2>
+              <p>
+                The interaction is intentionally simple. A person hears a trace
+                from someone who is not physically there, but still feels
+                present through sound and light.
+              </p>
+              <p>
+                I liked that this created a quieter form of participation. It
+                does not ask strangers to perform or speak to each other
+                directly; it simply lets small contributions build a shared
+                atmosphere over time.
+              </p>
+            </section>
+
+            <section class="project-content__body reveal">
+              <figure class="project-framework-frame">
+                <img
+                  src="../assets/thesis-conceptual-framework.png"
+                  alt="Conceptual framework diagram for the thesis"
+                  class="project-framework-image"
+                />
+              </figure>
+            </section>
+
+            <section class="project-content__body reveal" id="prototype">
+              <h2 class="project-content__heading">Prototype Development</h2>
+              <p>
+                The prototype brought together the orb form, responsive light,
+                audio playback, and a QR-based contribution pathway. It was
+                built as a research artefact, not a final public installation,
+                so I could test the idea and learn what needed to be clearer.
+              </p>
+              <p>
+                The build helped me understand both the promise and the limits
+                of the concept. Future development would need to consider
+                durability, weatherproofing, privacy, moderation, accessibility,
+                and how people would understand the contribution process in a
+                real public setting.
+              </p>
+            </section>
+
+            <section class="project-content__body reveal">
+              <div class="prototype-gallery-frame">
+                <div class="prototype-gallery">
+                  <figure class="prototype-gallery__item">
+                    <img
+                      src="../assets/thesis-prototype-1.png"
+                      alt="Prototype image 1"
+                      class="prototype-gallery__image"
+                    />
+                  </figure>
+                  <figure class="prototype-gallery__item">
+                    <img
+                      src="../assets/thesis-prototype-2.jpg"
+                      alt="Prototype image 2"
+                      class="prototype-gallery__image"
+                    />
+                  </figure>
+                  <figure class="prototype-gallery__item">
+                    <img
+                      src="../assets/thesis-prototype-3.jpg"
+                      alt="Prototype image 3"
+                      class="prototype-gallery__image"
+                    />
+                  </figure>
+                  <figure class="prototype-gallery__item">
+                    <img
+                      src="../assets/thesis-prototype-4.jpg"
+                      alt="Prototype image 4"
+                      class="prototype-gallery__image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-content__body reveal" id="evaluation">
+              <h2 class="project-content__heading">
+                Evaluation &amp; Findings
+              </h2>
+              <p>
+                I evaluated the prototype through a small mixed-method study
+                using a short survey, design discussions, and observation notes.
+                I focused on how people approached the object, what felt clear,
+                and what made the interaction meaningful.
+              </p>
+              <p>
+                People were drawn to the object and the light first. The audio
+                became meaningful when they realised it represented another
+                person’s trace. That finding was important because it showed
+                that the social meaning needed to be made clear without
+                over-explaining it.
+              </p>
+            </section>
+            <section class="project-content__body reveal" id="outcome">
+              <h2 class="project-content__heading">Outcome</h2>
+              <p>
+                This project showed me how media architecture can work best when
+                it respects the pace and character of a place.
+                <strong>Residues of Passage</strong> is not about making a
+                bridge busier or louder; it is about making small traces of
+                presence easier to notice.
+              </p>
+              <p>
+                The final thesis brings together spatial research, interaction
+                clarity, sensory engagement, participation, and practical
+                deployment considerations into a user-centred media architecture
+                framework.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <nav class="project-nav" aria-label="Project navigation">
+        <div class="container project-nav__inner project-nav__inner--three">
+          <a class="project-nav__back" href="heritage-systems-map.html">
+            <span class="project-nav__eyebrow">Previous Project</span>
+            <span class="project-nav__label"
+              >← Cultural Heritage Systems Map</span
+            >
+          </a>
+          <a class="project-nav__top btn btn-outline" href="#top"
+            >Back to Top</a
+          >
+          <a class="project-nav__next" href="play-palooza.html">
+            <span class="project-nav__eyebrow">Next Project</span>
+            <span class="project-nav__label">Play Palooza →</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="footer footer-simple">
+      <div class="container footer-simple__grid">
+        <div class="footer-simple__col">
+          <h3>Contact Me <span aria-hidden="true">💌</span></h3>
+          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>Let’s Connect <span aria-hidden="true">💫</span></h3>
+          <a
+            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>
+            Designed &amp; made by Divya Rastogi
+            <span aria-hidden="true">✨</span>
+          </h3>
+          <p>© 2026 Original Work</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var frame = document.querySelector(".thesis-sequence-frame");
+        if (!frame) return;
+
+        var images = Array.from(frame.querySelectorAll(".thesis-sequence-img"));
+        if (!images.length) return;
+
+        var index = 0;
+        frame.classList.add("js-ready");
+
+        function showImage(nextIndex) {
+          images.forEach(function (img, i) {
+            img.classList.toggle("is-active", i === nextIndex);
+          });
+        }
+
+        showImage(index);
+
+        setInterval(function () {
+          index = (index + 1) % images.length;
+          showImage(index);
+        }, 2000);
       });
-    }
+    </script>
 
-    showImage(index);
-
-    setInterval(function () {
-      index = (index + 1) % images.length;
-      showImage(index);
-    }, 2000);
-  });
-</script>
-
-<script type="module" src="../js/app.js"></script>
-</body>
+    <script type="module" src="../js/app.js"></script>
+  </body>
 </html>
