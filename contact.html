@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Divya Rastogi — UX Designer & Architect based in Brisbane, Queensland, Australia."
+    />
+    <title>Contact — Divya Rastogi</title>
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="index.html" class="navbar__link">Work</a>
+      <a href="about.html" class="navbar__link">About</a>
+      <a href="contact.html" class="navbar__link active">Contact</a>
+    </nav>
+    <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="navbar__mobile" aria-label="Mobile navigation">
+  <a href="index.html" class="navbar__mobile-link">Work</a>
+  <a href="about.html" class="navbar__mobile-link">About</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+</nav>
+
+    <main>
+      <section
+        class="section"
+        style="padding-top: calc(80px + 5rem); padding-bottom: var(--sp-32)"
+      >
+        <div class="container">
+          <p class="section-label reveal">Get in Touch</p>
+          <h1
+            class="section-heading reveal"
+            style="margin-bottom: var(--sp-16)"
+          >
+            Let's make something <em>together.</em>
+          </h1>
+
+          <div class="contact-grid">
+            <!-- Left: info -->
+            <div class="reveal">
+              <a
+                href="mailto:ardivyarastogi@gmail.com"
+                class="contact-info__email"
+                >ardivyarastogi@gmail.com</a
+              >
+
+              <p style="margin-bottom: var(--sp-8)">
+                Whether you have a project in mind, want to discuss
+                collaboration, or just want to say hello, I'd love to hear from
+                you.
+              </p>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: var(--sp-4);
+                  margin-bottom: var(--sp-8);
+                "
+              >
+                <div>
+                  <p
+                    class="font-mono"
+                    style="
+                      font-size: var(--fs-xs);
+                      color: var(--color-muted);
+                      letter-spacing: 0.1em;
+                      text-transform: uppercase;
+                      margin-bottom: var(--sp-1);
+                    "
+                  >
+                    Location
+                  </p>
+                  <p style="color: var(--color-fg); font-size: var(--fs-sm)">
+                    Brisbane, Queensland, Australia
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="font-mono"
+                    style="
+                      font-size: var(--fs-xs);
+                      color: var(--color-muted);
+                      letter-spacing: 0.1em;
+                      text-transform: uppercase;
+                      margin-bottom: var(--sp-1);
+                    "
+                  >
+                    Availability
+                  </p>
+                  <p style="color: var(--color-fg); font-size: var(--fs-sm)">
+                    Open to full-time & freelance opportunities
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="font-mono"
+                    style="
+                      font-size: var(--fs-xs);
+                      color: var(--color-muted);
+                      letter-spacing: 0.1em;
+                      text-transform: uppercase;
+                      margin-bottom: var(--sp-1);
+                    "
+                  >
+                    Response Time
+                  </p>
+                  <p style="color: var(--color-fg); font-size: var(--fs-sm)">
+                    Within 24 hours
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: var(--sp-4)">
+                <a
+                  href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outline"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+
+            <!-- Right: form -->
+            <div class="reveal">
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="Project enquiry / Collaboration / Other"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Tell me about your project or idea..."
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="submit-btn"
+                  style="
+                    width: 100%;
+                    justify-content: center;
+                    font-size: var(--fs-sm);
+                    padding: var(--sp-4);
+                  "
+                >
+                  Send Message →
+                </button>
+                <p
+                  id="form-status"
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: var(--fs-xs);
+                    color: var(--color-accent);
+                    margin-top: var(--sp-4);
+                    text-align: center;
+                    display: none;
+                  "
+                ></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer footer-simple">
+      <div class="container footer-simple__grid">
+        <div class="footer-simple__col">
+          <h3>Contact Me <span aria-hidden="true">💌</span></h3>
+          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>Let’s Connect <span aria-hidden="true">💫</span></h3>
+          <a
+            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>
+            Designed &amp; made by Divya Rastogi
+            <span aria-hidden="true">✨</span>
+          </h3>
+          <p>© 2026 Original Work</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script>
+      // Simple form feedback (no backend)
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const btn = document.getElementById("submit-btn");
+          const status = document.getElementById("form-status");
+          btn.textContent = "Sending…";
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.textContent = "Message Sent ✓";
+            status.textContent = "Thanks! I'll be in touch within 24 hours.";
+            status.style.display = "block";
+          }, 1200);
+        });
+    </script>
+  </body>
+</html>

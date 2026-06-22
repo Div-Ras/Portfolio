@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Divya Rastogi — UX Designer & Architect based in Brisbane, Queensland, Australia. Crafting thoughtful spatial and digital experiences."
+    />
+    <title>Work — Divya Rastogi</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <!-- Dynamic glowing spotlight -->
+
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="banner">
+      <div class="container navbar__inner">
+        <nav class="navbar__nav" aria-label="Primary navigation">
+          <a href="index.html" class="navbar__link active">Work</a>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+        </nav>
+        <button
+          class="navbar__hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="navbar__mobile" aria-label="Mobile navigation">
+      <a href="index.html" class="navbar__mobile-link">Work</a>
+      <a href="about.html" class="navbar__mobile-link">About</a>
+      <a href="contact.html" class="navbar__mobile-link">Contact</a>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <main>
+      <section class="hero" data-component="hero">
+        <div class="container hero__content parallax-el" data-speed="2.5">
+          <p class="hero__eyebrow">Brisbane, Queensland, Australia</p>
+          <h1 class="hero__name">
+            Divya<br />
+            <span>Rastogi</span>
+          </h1>
+          <p class="hero__tagline">
+            <span class="typewriter" data-hero-tagline
+              >Designing spaces and experiences that endure.</span
+            >
+          </p>
+          <p class="hero__intro">
+            I'm a UX Designer &amp; Architect bridging the physical and digital,
+            from spatial design to digital products, always with people at the
+            centre.
+          </p>
+          <div class="hero__ctas">
+            <a href="#selected-work" class="btn btn-primary">View My Work</a>
+            <a href="about.html" class="btn btn-outline">Learn About Me</a>
+          </div>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="hero__scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ==================== MARQUEE ==================== -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item">UX Design</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Architecture</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Human-Centred Design</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Spatial Experience</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Research & Strategy</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Figma</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Adobe Creative Cloud</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Blender</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">SketchUp</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">AutoCAD</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Data Visualisation</span
+          ><span class="marquee__sep">·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="marquee__item">UX Design</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Architecture</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Human-Centred Design</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Spatial Experience</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Research & Strategy</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Figma</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Adobe Creative Cloud</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Blender</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">SketchUp</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">AutoCAD</span
+          ><span class="marquee__sep">·</span>
+          <span class="marquee__item">Data Visualisation</span
+          ><span class="marquee__sep">·</span>
+        </div>
+      </div>
+
+      <!-- ==================== SELECTED WORK ==================== -->
+      <section class="section" id="selected-work">
+        <div class="container">
+          <p class="section-label reveal">02 — Selected Work</p>
+          <div
+            style="
+              display: flex;
+              align-items: flex-end;
+              justify-content: space-between;
+              gap: var(--sp-6);
+              flex-wrap: wrap;
+              margin-bottom: var(--sp-12);
+            "
+          >
+            <h2 class="section-heading reveal" style="margin-bottom: 0">
+              Featured <em>Projects</em>
+            </h2>
+            <a href="#selected-work" class="btn btn-outline reveal"
+              >Browse Work</a
+            >
+          </div>
+          <div class="project-grid" data-component="project-grid"></div>
+        </div>
+      </section>
+
+      <!-- ==================== STATS ==================== -->
+      <section class="section">
+        <div class="container">
+          <div class="stats-grid reveal">
+            <div class="stat">
+              <div class="stat__number">6+</div>
+              <div class="stat__label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-project-count>20+</div>
+              <div class="stat__label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">3</div>
+              <div class="stat__label">Disciplines</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer footer-simple">
+      <div class="container footer-simple__grid">
+        <div class="footer-simple__col">
+          <h3>Contact Me <span aria-hidden="true">💌</span></h3>
+          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>Let’s Connect <span aria-hidden="true">💫</span></h3>
+          <a
+            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>
+            Designed &amp; made by Divya Rastogi
+            <span aria-hidden="true">✨</span>
+          </h3>
+          <p>© 2026 Original Work</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+/* ============================================================
+   ANIMATIONS — Keyframes, Cursor, Hover Effects
+   ============================================================ */
+
+/* ---- Global Blueprint Grid — removed ---- */
+body::before { display: none; }
+
+/* ---- Dynamic Spotlight Effect ---- */
+.spotlight { display: none !important; }
+body.mouse-moving .spotlight { display: none !important; }
+
+/* ---- Parallax Element Effect ---- */
+.parallax-el {
+  transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ---- Keyframes ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50%       { opacity: 0.3; transform: scaleY(0.6); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes cursorPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%       { transform: translate(-50%, -50%) scale(1.4); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ---- CUSTOM CURSOR ---- */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--color-fg); /* Solid near-black dot */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  border: 1.5px solid transparent;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease;
+  mix-blend-mode: normal;
+}
+body.cursor-hover .cursor {
+  width: 44px;
+  height: 44px;
+  background: rgba(196, 129, 142, 0.15); /* Translucent rose gold fill */
+  border-color: var(--color-accent); /* Rose gold border */
+}
+
+/* ---- MARQUEE STRIP ---- */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: var(--sp-6) 0;
+  background: var(--color-bg-2); /* Clean subtle off-white */
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.marquee__track {
+  display: inline-flex;
+  animation: marquee 22s linear infinite;
+  gap: 0;
+}
+.marquee__item {
+  font-family: var(--font-body);
+  font-size: 1.16rem;
+  font-weight: 600;
+  color: var(--color-fg); /* High visibility rich near-black */
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0 var(--sp-8);
+  flex-shrink: 0;
+}
+.marquee__sep {
+  font-family: var(--font-display);
+  color: var(--color-accent-2-d);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 var(--sp-4);
+}
+
+/* ---- TYPEWRITER / ROTATING TAGLINE ---- */
+.typewriter {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* ---- HOVER UNDERLINE SWEEP ---- */
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--transition);
+}
+.hover-underline:hover::after { width: 100%; }
+
+/* ---- SECTION LINE EXTENSION ---- */
+.section-line {
+  position: relative;
+  overflow: hidden;
+}
+.section-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 1s ease;
+}
+.section-line.visible::after { width: 100%; }
+
+/* ---- GRAIN TEXTURE — removed (was adding visual noise) ---- */
+.grain {
+  display: none;
+}
+
+/* ---- IMAGE PLACEHOLDER (no real image) ---- */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-card) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(125,143,200,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125,143,200,0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.img-placeholder::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
