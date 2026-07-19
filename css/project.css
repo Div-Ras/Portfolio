@@ -116,9 +116,9 @@
   gap: var(--sp-20);
 }
 .project-content__body p {
-  font-size: 1.28rem;
+  font-size: 1.12rem;
   color: var(--color-muted);
-  line-height: 1.82;
+  line-height: 1.85;
   margin-bottom: var(--sp-5);
   max-width: 1040px;
 }
@@ -272,34 +272,56 @@
 
 /* ---- OVERVIEW TABLE ---- */
 .project-overview-table {
-  margin-top: var(--sp-8);
-  border-top: 1px solid var(--color-border);
+  margin-top: var(--sp-10);
+  margin-bottom: var(--sp-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: var(--sp-4) var(--sp-8);
+  box-shadow: var(--shadow-glow);
   display: flex;
   flex-direction: column;
 }
 .project-overview-row {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: var(--sp-6);
+  grid-template-columns: 180px 1fr;
+  gap: var(--sp-8);
   padding: var(--sp-5) 0;
   border-bottom: 1px solid var(--color-border);
   align-items: baseline;
 }
+.project-overview-row:last-child {
+  border-bottom: none;
+}
 .project-overview-key {
   font-family: var(--font-mono);
-  font-size: 0.86rem;
-  color: var(--color-muted);
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  font-weight: var(--fw-semi);
   flex-shrink: 0;
 }
 .project-overview-val {
-  font-size: 1.1rem;
+  font-size: 1.02rem;
   color: var(--color-fg);
-  line-height: var(--lh-loose);
+  line-height: 1.6;
+  font-weight: 450;
 }
-@media (max-width: 540px) {
-  .project-overview-row { grid-template-columns: 1fr; gap: var(--sp-1); }
+.project-overview-val a {
+  color: var(--color-accent);
+  font-weight: var(--fw-semi);
+  border-bottom: 1px solid transparent;
+  transition: border-bottom var(--transition);
+}
+.project-overview-val a:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+@media (max-width: 640px) {
+  .project-overview-table { padding: var(--sp-4) var(--sp-5); }
+  .project-overview-row { grid-template-columns: 1fr; gap: var(--sp-1); padding: var(--sp-4) 0; }
 }
 
 /* ---- RESEARCH QUESTION HIGHLIGHT ---- */
@@ -1036,4 +1058,11 @@
 .project-cover__img {
   object-fit: cover;
   object-position: center center;
+}
+
+@media (max-width: 640px) {
+  .project-content__body p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
 }
