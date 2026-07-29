@@ -18,22 +18,26 @@
     <div class="grain" aria-hidden="true"></div>
 
     <header class="navbar" role="banner">
-  <div class="container navbar__inner">
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link">Work</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="contact.html" class="navbar__link active">Contact</a>
+      <div class="container navbar__inner">
+        <nav class="navbar__nav" aria-label="Primary navigation">
+          <a href="index.html" class="navbar__link">Work</a>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="contact.html" class="navbar__link active">Contact</a>
+        </nav>
+        <button
+          class="navbar__hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="navbar__mobile" aria-label="Mobile navigation">
+      <a href="index.html" class="navbar__mobile-link">Work</a>
+      <a href="about.html" class="navbar__mobile-link">About</a>
+      <a href="contact.html" class="navbar__mobile-link">Contact</a>
     </nav>
-    <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav class="navbar__mobile" aria-label="Mobile navigation">
-  <a href="index.html" class="navbar__mobile-link">Work</a>
-  <a href="about.html" class="navbar__mobile-link">About</a>
-  <a href="contact.html" class="navbar__mobile-link">Contact</a>
-</nav>
 
     <main>
       <section
@@ -138,74 +142,18 @@
 
             <!-- Right: form -->
             <div class="reveal">
-              <form id="contact-form" novalidate>
-                <div class="form-group">
-                  <label for="name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="form-input"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-input"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="subject" class="form-label">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    class="form-input"
-                    placeholder="Project enquiry / Collaboration / Other"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="form-textarea"
-                    placeholder="Tell me about your project or idea..."
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  id="submit-btn"
-                  style="
-                    width: 100%;
-                    justify-content: center;
-                    font-size: var(--fs-sm);
-                    padding: var(--sp-4);
-                  "
-                >
-                  Send Message →
-                </button>
-                <p
-                  id="form-status"
-                  style="
-                    font-family: var(--font-mono);
-                    font-size: var(--fs-xs);
-                    color: var(--color-accent);
-                    margin-top: var(--sp-4);
-                    text-align: center;
-                    display: none;
-                  "
-                ></p>
-              </form>
+              <a
+                href="mailto:ardivyarastogi@gmail.com?subject=Portfolio%20Enquiry&body=Hi%20Divya,%0A%0AI%20would%20like%20to%20discuss..."
+                class="btn btn-primary"
+                style="
+                  width: 100%;
+                  justify-content: center;
+                  font-size: var(--fs-sm);
+                  padding: var(--sp-4);
+                "
+              >
+                Send Message →
+              </a>
             </div>
           </div>
         </div>
