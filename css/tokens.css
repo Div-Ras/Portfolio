@@ -1,40 +1,50 @@
 /* ============================================================
-   DESIGN TOKENS — Divya Rastogi Portfolio
+   DESIGN TOKENS — Royal Blue × Deep Purple × Burgundy Tactile Edition
    ============================================================ */
 :root {
-  /* Palette — Cool Mist × Dusty Rose × Soft Periwinkle */
-  --color-bg: #f7f4ee;
-  --color-bg-2:      #eef5fb;
-  --color-bg-card: rgba(255, 253, 248, 0.78);
-  --color-surface: #eef4f7;
-  --color-border: rgba(37, 48, 74, 0.13);
-  --color-border-h:  rgba(196,129,142,0.30);
+  /* High-Contrast Palette — Royal Blue, Deep Purple, Burgundy (ZERO RED) */
+  --color-bg:          #FAF7F5;
+  --color-bg-2:        #F2EBE7;
+  --color-bg-card:     rgba(255, 253, 251, 0.94);
+  --color-surface:     #EAE1DC;
+  --color-border:      rgba(43, 78, 140, 0.15);
+  --color-border-h:    rgba(91, 44, 111, 0.45);
 
-  --color-fg: #25304a;
-  --color-muted: #667284;
-  --color-accent: #293c72;
-  --color-accent-d: #1f2f5b;
-  --color-accent-bg: rgba(41, 60, 114, 0.08);
-  --color-accent-2: #8aa5b8;
-  --color-accent-2-d: #526f84;
-  --color-accent-2-bg: rgba(125,143,200,0.15);
+  --color-fg:          #151922; /* Deep Slate Charcoal */
+  --color-muted:       #4B5466;
+
+  --color-accent:      #2B4E8C; /* Royal Blue */
+  --color-accent-d:    #193361;
+  --color-accent-bg:   rgba(43, 78, 140, 0.08);
+
+  --color-accent-2:    #5B2C6F; /* Deep Purple / Royal Plum */
+  --color-accent-2-d:  #3D1B4C;
+  --color-accent-2-bg: rgba(91, 44, 111, 0.08);
+
+  --color-accent-3:    #6E1A44; /* Rich Burgundy */
+  --color-accent-3-bg: rgba(110, 26, 68, 0.12);
+
+  /* Gradients */
+  --grad-royal:        linear-gradient(135deg, #2B4E8C 0%, #5B2C6F 50%, #6E1A44 100%);
+  --grad-plum-blue:    linear-gradient(135deg, #5B2C6F 0%, #2B4E8C 100%);
+  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #F4ECE7 100%);
+  --grad-soft-bg:      linear-gradient(180deg, #FAF7F5 0%, #F2EBE7 50%, #FAF7F5 100%);
 
   /* Typography */
-  --font-display: 'Bodoni Moda', 'Didot', 'Times New Roman', serif;
+  --font-display:   'Bodoni Moda', 'Didot', 'Times New Roman', serif;
   --font-signature: 'Allura', cursive;
-  --font-body:    'Inter', -apple-system, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  --font-body:      'Inter', -apple-system, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
 
   --fs-xs:   0.82rem;
-  --fs-sm:   1rem;
-  --fs-base: 1.075rem;
-  --fs-md:   1.25rem;
-  --fs-lg:   1.55rem;
-  --fs-xl:   1.95rem;
-  --fs-2xl:  2.5rem;
-  --fs-3xl:  3.5rem;
-  --fs-4xl:  5rem;
-  --fs-5xl:  7rem;
+  --fs-sm:   0.98rem;
+  --fs-base: 1.05rem;
+  --fs-md:   1.2rem;
+  --fs-lg:   1.45rem;
+  --fs-xl:   1.85rem;
+  --fs-2xl:  2.3rem;
+  --fs-3xl:  3.2rem;
+  --fs-4xl:  4.5rem;
 
   --fw-light:  300;
   --fw-normal: 400;
@@ -59,25 +69,28 @@
   --sp-12: 3rem;
   --sp-16: 4rem;
   --sp-20: 5rem;
-  --sp-24: 6rem;
-  --sp-32: 8rem;
+
+  --section-pad: clamp(3rem, 6vw, 6rem); /* Fluid balanced section spacing */
 
   /* Layout */
   --max-w:    1760px;
   --max-w-sm: 860px;
-  --gutter:   clamp(0.75rem, 2vw, 1.5rem);
+  --gutter:   clamp(1rem, 4vw, 2.5rem);
 
-  /* Effects */
-  --radius-sm: 4px;
-  --radius:    8px;
-  --radius-lg: 16px;
+  /* Effects & Tactile Shadows */
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 24px;
+  --radius-pill: 100px;
 
-  /* Soft shadows for light dusty-rose theme */
-  --shadow-card: 0 24px 70px rgba(37, 48, 74, 0.10);
-  --shadow-glow: 0 0 0 1px rgba(196,129,142,0.12), 0 4px 24px rgba(100,60,65,0.09);
+  /* Tactile Shadows (Royal Blue & Burgundy) */
+  --shadow-tactile: 0 10px 30px rgba(43, 78, 140, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --shadow-tactile-btn: 0 6px 20px rgba(43, 78, 140, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --shadow-card: 0 16px 40px rgba(21, 25, 34, 0.07);
+  --shadow-glow: 0 0 0 2px var(--color-accent), 0 12px 35px rgba(43, 78, 140, 0.25);
 
-  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
-  --transition-slow: 0.6s cubic-bezier(0.4,0,0.2,1);
+  --transition: 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Z-index */
   --z-below:  -1;
@@ -87,3 +100,4 @@
   --z-overlay: 200;
   --z-cursor:  9999;
 }
+

@@ -1,7 +1,109 @@
-/* Hero — rotating tagline + typewriter */
+/* Hero — flowing gradient blobs + typewriter tagline */
 export function mount(container) {
   if (!container) return;
 
+  // Canvas — sits behind all text content
+  let canvas = container.querySelector('.hero-canvas');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.className = 'hero-canvas';
+    canvas.style.cssText = 'position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;';
+    container.insertBefore(canvas, container.firstChild);
+  }
+
+  const ctx = canvas.getContext('2d');
+  let W, H;
+
+  function resize() {
+    W = canvas.width = container.clientWidth;
+    H = canvas.height = container.clientHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // ---- Flowing Blobs ----
+  const blobs = [
+    { x: 0.25, y: 0.30, r: 260, color: [43, 78, 140],  alpha: 0.18, phase: 0,    speed: 0.003 },
+    { x: 0.70, y: 0.55, r: 220, color: [91, 44, 111],  alpha: 0.15, phase: 2.1,  speed: 0.004 },
+    { x: 0.55, y: 0.20, r: 180, color: [110, 26, 68],  alpha: 0.13, phase: 4.2,  speed: 0.0035 },
+    { x: 0.35, y: 0.70, r: 200, color: [59, 82, 132],  alpha: 0.12, phase: 1.0,  speed: 0.0025 },
+    { x: 0.80, y: 0.30, r: 160, color: [91, 44, 111],  alpha: 0.10, phase: 3.5,  speed: 0.003 },
+  ];
+
+  let mouseX = W / 2;
+  let mouseY = H / 2;
+  let targetMX = mouseX;
+  let targetMY = mouseY;
+  let time = 0;
+
+  window.addEventListener('mousemove', e => {
+    const rect = container.getBoundingClientRect();
+    if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+      targetMX = e.clientX - rect.left;
+      targetMY = e.clientY - rect.top;
+    }
+  });
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    time += 1;
+
+    // Smooth mouse lerp
+    mouseX += (targetMX - mouseX) * 0.03;
+    mouseY += (targetMY - mouseY) * 0.03;
+
+    // Mouse influence (normalised 0-1)
+    const mx = mouseX / W;
+    const my = mouseY / H;
+
+    for (const b of blobs) {
+      // Organic drift — each blob orbits its home position
+      const drift = time * b.speed + b.phase;
+      const bx = (b.x + Math.sin(drift) * 0.08 + (mx - 0.5) * 0.12) * W;
+      const by = (b.y + Math.cos(drift * 0.7) * 0.06 + (my - 0.5) * 0.10) * H;
+
+      // Breathing radius
+      const br = b.r + Math.sin(drift * 1.3) * 30;
+
+      // Radial gradient — soft edge
+      const grad = ctx.createRadialGradient(bx, by, 0, bx, by, br);
+      const [r, g, bl] = b.color;
+      grad.addColorStop(0, `rgba(${r}, ${g}, ${bl}, ${b.alpha})`);
+      grad.addColorStop(0.6, `rgba(${r}, ${g}, ${bl}, ${b.alpha * 0.4})`);
+      grad.addColorStop(1, `rgba(${r}, ${g}, ${bl}, 0)`);
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(bx, by, br, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Subtle flowing contour lines — architectural feel
+    ctx.save();
+    ctx.globalAlpha = 0.06;
+    ctx.strokeStyle = 'rgba(43, 78, 140, 1)';
+    ctx.lineWidth = 0.8;
+
+    for (let i = 0; i < 4; i++) {
+      const offset = time * 0.004 + i * 1.5;
+      ctx.beginPath();
+      for (let x = 0; x <= W; x += 8) {
+        const yBase = H * (0.3 + i * 0.15);
+        const wave = Math.sin(x * 0.006 + offset) * 40
+                   + Math.sin(x * 0.003 + offset * 0.7) * 25
+                   + (mx - 0.5) * 30;
+        if (x === 0) ctx.moveTo(x, yBase + wave);
+        else ctx.lineTo(x, yBase + wave);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  // Typewriter
   const phrases = [
     'Designing spaces and experiences that endure.',
     'Where architecture meets human-centred design.',
@@ -12,9 +114,7 @@ export function mount(container) {
   const taglineEl = container.querySelector('[data-hero-tagline]');
   if (!taglineEl) return;
 
-  // Clear immediately to prevent the full static HTML text from flashing before typing starts
   taglineEl.textContent = '';
-
   let index = 0;
   let charIdx = 0;
   let deleting = false;
@@ -26,7 +126,7 @@ export function mount(container) {
       current = target.slice(0, ++charIdx);
       if (charIdx === target.length) {
         deleting = true;
-        setTimeout(type, 3000); // Hold phrase for 3s
+        setTimeout(type, 3000);
         return;
       }
     } else {
@@ -37,9 +137,9 @@ export function mount(container) {
       }
     }
     taglineEl.textContent = current;
-    setTimeout(type, deleting ? 20 : 45); // Snappy speeds (45ms type, 20ms backspace)
+    setTimeout(type, deleting ? 20 : 45);
   }
 
-  // Start typing when the hero section animations begin fading in
   setTimeout(type, 600);
 }
+

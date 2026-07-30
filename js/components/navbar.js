@@ -1,7 +1,23 @@
-/* Navbar — sticky + active link + mobile hamburger */
+/* Navbar — sticky + clean nav links + status pill (name removed per preference) */
 export function mount() {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
+
+  const inner = navbar.querySelector('.navbar__inner');
+  if (inner) {
+    // Remove any leftover logo element if present
+    const existingLogo = inner.querySelector('.navbar__logo');
+    if (existingLogo) existingLogo.remove();
+
+    // Ensure status badge on the right
+    let statusDiv = inner.querySelector('.navbar__status');
+    if (!statusDiv) {
+      statusDiv = document.createElement('div');
+      statusDiv.className = 'navbar__status';
+      statusDiv.innerHTML = '<span class="status-dot"></span> <span class="status-text">Available for Projects</span>';
+      inner.appendChild(statusDiv);
+    }
+  }
 
   // ----- Scroll class -----
   window.addEventListener('scroll', () => {
@@ -38,3 +54,4 @@ export function mount() {
     });
   }
 }
+

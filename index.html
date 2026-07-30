@@ -50,10 +50,23 @@
       <section class="hero" data-component="hero">
         <div class="container hero__content parallax-el" data-speed="2.5">
           <p class="hero__eyebrow">Brisbane, Queensland, Australia</p>
-          <h1 class="hero__name">
-            Divya<br />
-            <span>Rastogi</span>
-          </h1>
+
+          <div class="hero__name-wrap">
+            <div class="hero__name-halo" aria-hidden="true"></div>
+            <h1 class="hero__name">
+              Divya<br />
+              <span>Rastogi</span>
+            </h1>
+
+            <!-- Floating Interactive Boho Badges & Starbursts -->
+            <div class="hero__floating-elements" aria-hidden="true">
+              <span class="hero__badge hero__badge--1 parallax-el" data-speed="4.0">✦ UX &amp; Product Design</span>
+              <span class="hero__badge hero__badge--2 parallax-el" data-speed="3.2">🏛️ Spatial Architecture</span>
+              <span class="hero__starburst hero__starburst--1">✹</span>
+              <span class="hero__starburst hero__starburst--2">✧</span>
+            </div>
+          </div>
+
           <p class="hero__tagline">
             <span class="typewriter" data-hero-tagline
               >Designing spaces and experiences that endure.</span
@@ -129,7 +142,7 @@
       <!-- ==================== SELECTED WORK ==================== -->
       <section class="section" id="selected-work">
         <div class="container">
-          <p class="section-label reveal">02 — Selected Work</p>
+          <p class="section-label reveal">02 — Selected Portfolio Work</p>
           <div
             style="
               display: flex;
@@ -137,16 +150,25 @@
               justify-content: space-between;
               gap: var(--sp-6);
               flex-wrap: wrap;
-              margin-bottom: var(--sp-12);
+              margin-bottom: var(--sp-8);
             "
           >
             <h2 class="section-heading reveal" style="margin-bottom: 0">
               Featured <em>Projects</em>
             </h2>
             <a href="#selected-work" class="btn btn-outline reveal"
-              >Browse Work</a
+              >Browse Work ✦</a
             >
           </div>
+
+          <!-- Interactive Filter Bar -->
+          <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">✦ All Work</button>
+            <button class="filter-btn" data-filter="ux">🎨 UX &amp; Products</button>
+            <button class="filter-btn" data-filter="spatial">🏛️ Spatial &amp; Architecture</button>
+            <button class="filter-btn" data-filter="research">🔬 HCI &amp; Systems</button>
+          </div>
+
           <div class="project-grid" data-component="project-grid"></div>
         </div>
       </section>

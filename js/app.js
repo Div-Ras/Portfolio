@@ -20,7 +20,7 @@ export const PROJECTS = [
       "Thesis"
     ],
     "categories": [
-      "ux"
+      "ux", "spatial", "research"
     ],
     "label": "Residues of Passage",
     "image": "assets/project-01-thesis-cover.jpg",
@@ -66,7 +66,7 @@ export const PROJECTS = [
       "Research"
     ],
     "categories": [
-      "ux"
+      "ux", "research"
     ],
     "label": "Systems Thinking",
     "image": "assets/project-04-heritage-cover.jpg",
