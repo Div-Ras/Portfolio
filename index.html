@@ -29,6 +29,7 @@
           <a href="index.html" class="navbar__link active">Work</a>
           <a href="about.html" class="navbar__link">About</a>
           <a href="contact.html" class="navbar__link">Contact</a>
+          <a href="assets/Divya_Rastogi_Resume.pdf" target="_blank" rel="noopener" class="navbar__link navbar__link--resume">Resume</a>
         </nav>
         <button
           class="navbar__hamburger"
@@ -43,6 +44,7 @@
       <a href="index.html" class="navbar__mobile-link">Work</a>
       <a href="about.html" class="navbar__mobile-link">About</a>
       <a href="contact.html" class="navbar__mobile-link">Contact</a>
+      <a href="assets/Divya_Rastogi_Resume.pdf" target="_blank" rel="noopener" class="navbar__mobile-link">Resume</a>
     </nav>
 
     <!-- ==================== HERO ==================== -->
@@ -58,7 +60,7 @@
               <span>Rastogi</span>
             </h1>
 
-            <!-- Floating Interactive Boho Badges & Starbursts -->
+            <!-- Floating Interactive Badges -->
             <div class="hero__floating-elements" aria-hidden="true">
               <span
                 class="hero__badge hero__badge--1 parallax-el"
@@ -71,8 +73,6 @@
               >
                 | Spatial Design</span
               >
-              <span class="hero__starburst hero__starburst--1">✹</span>
-              <span class="hero__starburst hero__starburst--2">✧</span>
             </div>
           </div>
 
@@ -87,8 +87,8 @@
             Currently based in Brisbane.
           </p>
           <div class="hero__ctas">
-            <a href="#selected-work" class="btn btn-primary">View My Work</a>
-            <a href="about.html" class="btn btn-outline">Learn About Me</a>
+            <a href="assets/Divya_Rastogi_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download Resume</a>
+            <a href="#selected-work" class="btn btn-outline">View Work</a>
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true">
@@ -108,7 +108,7 @@
           ><span class="marquee__sep">·</span>
           <span class="marquee__item">Spatial Experience</span
           ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Research & Strategy</span
+          <span class="marquee__item">Research &amp; Strategy</span
           ><span class="marquee__sep">·</span>
           <span class="marquee__item">Figma</span
           ><span class="marquee__sep">·</span>
@@ -133,7 +133,7 @@
           ><span class="marquee__sep">·</span>
           <span class="marquee__item">Spatial Experience</span
           ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Research & Strategy</span
+          <span class="marquee__item">Research &amp; Strategy</span
           ><span class="marquee__sep">·</span>
           <span class="marquee__item">Figma</span
           ><span class="marquee__sep">·</span>
@@ -170,27 +170,85 @@
               Featured <em>Projects</em>
             </h2>
             <a href="#selected-work" class="btn btn-outline reveal"
-              >Browse Work ✦</a
+              >Browse Work</a
             >
           </div>
 
           <!-- Interactive Filter Bar -->
           <div class="filter-bar reveal">
             <button class="filter-btn active" data-filter="all">
-              ✦ All Work
+              All Work
             </button>
             <button class="filter-btn" data-filter="ux">
-              🎨 UX &amp; Products
+              UX &amp; Products
             </button>
             <button class="filter-btn" data-filter="spatial">
-              🏛️ Spatial &amp; Architecture
+              Spatial &amp; Architecture
             </button>
             <button class="filter-btn" data-filter="research">
-              🔬 HCI &amp; Systems
+              HCI &amp; Systems
             </button>
           </div>
 
           <div class="project-grid" data-component="project-grid"></div>
+        </div>
+      </section>
+
+      <!-- ==================== DESIGN PROCESS ==================== -->
+      <section class="section" id="process">
+        <div class="container">
+          <p class="section-label reveal">03 | Design Methodology</p>
+          <div style="margin-bottom: var(--sp-8);">
+            <h2 class="section-heading reveal" style="margin-bottom: 0;">
+              My <em>Design Process</em>
+            </h2>
+          </div>
+
+          <div class="process-grid reveal">
+            <article class="process-card">
+              <div class="process-card__number">01</div>
+              <h3 class="process-card__title">Research &amp; Context</h3>
+              <p class="process-card__desc">Uncovering user needs through interviews, observation, and market analysis to understand the real problem space.</p>
+              <div class="process-card__tags">
+                <span class="process-tag">Contextual Inquiry</span>
+                <span class="process-tag">Interviews</span>
+                <span class="process-tag">Synthesis</span>
+              </div>
+            </article>
+
+            <article class="process-card">
+              <div class="process-card__number">02</div>
+              <h3 class="process-card__title">Structure &amp; Mapping</h3>
+              <p class="process-card__desc">Translating research findings into clear information architecture, user journeys, and structural wireframes.</p>
+              <div class="process-card__tags">
+                <span class="process-tag">Architecture</span>
+                <span class="process-tag">User Flows</span>
+                <span class="process-tag">Wireframing</span>
+              </div>
+            </article>
+
+            <article class="process-card">
+              <div class="process-card__number">03</div>
+              <h3 class="process-card__title">Design &amp; Prototyping</h3>
+              <p class="process-card__desc">Crafting responsive UI layouts and interactive Figma prototypes, then validating them through usability testing.</p>
+              <div class="process-card__tags">
+                <span class="process-tag">Figma</span>
+                <span class="process-tag">Usability Testing</span>
+                <span class="process-tag">Micro-UX</span>
+              </div>
+            </article>
+
+            <article class="process-card">
+              <div class="process-card__number">04</div>
+              <h3 class="process-card__title">Systems &amp; Delivery</h3>
+              <p class="process-card__desc">Building accessible component libraries, ensuring WCAG compliance, and preparing clean handoff documentation.</p>
+              <div class="process-card__tags">
+                <span class="process-tag">Design Systems</span>
+                <span class="process-tag">Accessibility</span>
+                <span class="process-tag">Handoff</span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -219,12 +277,12 @@
     <footer class="footer footer-simple">
       <div class="container footer-simple__grid">
         <div class="footer-simple__col">
-          <h3>Contact Me <span aria-hidden="true">💌</span></h3>
+          <h3>Contact Me</h3>
           <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
         </div>
 
         <div class="footer-simple__col">
-          <h3>Let’s Connect <span aria-hidden="true">💫</span></h3>
+          <h3>Let's Connect</h3>
           <a
             href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
             target="_blank"
@@ -234,10 +292,7 @@
         </div>
 
         <div class="footer-simple__col">
-          <h3>
-            Designed &amp; made by Divya Rastogi
-            <span aria-hidden="true">✨</span>
-          </h3>
+          <h3>Designed &amp; made by Divya Rastogi</h3>
           <p>© 2026 Original Work</p>
         </div>
       </div>
