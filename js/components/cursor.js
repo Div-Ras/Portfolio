@@ -44,15 +44,15 @@ export function mount() {
   let lastStickerTime = 0;
   const stickerGlyphs = ['✿', '◇', '△', '❋', '◌', '⌾', 'ꕤ', '∘', '◈'];
   const stickerColors = [
-    'rgba(43, 78, 140, 0.22)',   // Royal Blue
-    'rgba(91, 44, 111, 0.20)',   // Deep Purple
-    'rgba(110, 26, 68, 0.18)',   // Burgundy
-    'rgba(59, 82, 132, 0.20)',   // Steel Blue
+    'rgba(43, 78, 140, 0.40)',   // Royal Blue
+    'rgba(91, 44, 111, 0.38)',   // Deep Purple
+    'rgba(110, 26, 68, 0.35)',   // Burgundy
+    'rgba(59, 82, 132, 0.38)',   // Steel Blue
   ];
 
   function dropSticker(x, y) {
     const now = Date.now();
-    if (now - lastStickerTime < 800) return;  // one sticker every 800ms
+    if (now - lastStickerTime < 600) return;  // one sticker every 600ms
     lastStickerTime = now;
 
     const sticker = document.createElement('span');
@@ -60,7 +60,7 @@ export function mount() {
     sticker.innerText = stickerGlyphs[Math.floor(Math.random() * stickerGlyphs.length)];
 
     const rotation = Math.floor(Math.random() * 360);
-    const size = 1.1 + Math.random() * 0.8;
+    const size = 1.6 + Math.random() * 0.8;
 
     sticker.style.left = `${x}px`;
     sticker.style.top = `${y}px`;
@@ -68,19 +68,49 @@ export function mount() {
     sticker.style.transform = `translate(-50%, -50%) scale(0) rotate(${rotation}deg)`;
     document.body.appendChild(sticker);
 
-    // Pop in with a slight delay
+    // Pop in with bouncy spring
     requestAnimationFrame(() => {
       sticker.style.transform = `translate(-50%, -50%) scale(${size}) rotate(${rotation + 15}deg)`;
       sticker.style.opacity = '1';
     });
 
-    // Fade out after lingering
-    setTimeout(() => {
-      sticker.style.opacity = '0';
-      sticker.style.transform = `translate(-50%, -50%) scale(${size * 0.6}) rotate(${rotation + 30}deg)`;
-    }, 3000);
+    // Click to pop — burst the sticker!
+    sticker.addEventListener('click', () => {
+      sticker.classList.add('popped');
+      // Spawn mini burst sparkles at sticker location
+      const rect = sticker.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      for (let i = 0; i < 6; i++) {
+        const burst = document.createElement('span');
+        burst.className = 'cursor-sparkle';
+        burst.innerText = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+        const angle = (Math.PI * 2 * i) / 6;
+        const dist = 20 + Math.random() * 25;
+        burst.style.left = `${cx}px`;
+        burst.style.top = `${cy}px`;
+        burst.style.color = stickerColors[Math.floor(Math.random() * stickerColors.length)];
+        burst.style.fontSize = '0.9rem';
+        burst.style.transform = `translate(-50%, -50%) scale(1)`;
+        document.body.appendChild(burst);
+        requestAnimationFrame(() => {
+          burst.style.opacity = '0';
+          burst.style.transform = `translate(calc(-50% + ${Math.cos(angle) * dist}px), calc(-50% + ${Math.sin(angle) * dist}px)) scale(0.3) rotate(${Math.random() * 360}deg)`;
+        });
+        setTimeout(() => burst.remove(), 600);
+      }
+      setTimeout(() => sticker.remove(), 400);
+    });
 
-    setTimeout(() => sticker.remove(), 3800);
+    // Auto fade out after lingering
+    let fadeTimer = setTimeout(() => {
+      if (!sticker.classList.contains('popped')) {
+        sticker.style.opacity = '0';
+        sticker.style.transform = `translate(-50%, -50%) scale(${size * 0.6}) rotate(${rotation + 30}deg)`;
+      }
+    }, 4000);
+
+    setTimeout(() => sticker.remove(), 5000);
   }
 
   // ---- Mouse Move Handler ----
