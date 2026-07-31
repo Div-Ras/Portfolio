@@ -29,7 +29,7 @@ export const PROJECTS = [
   },
   {
     "title": "Play Palooza",
-    "subtitle": "Freelance UX Research & App Design · In Progress",
+    "subtitle": "Freelance UX Research & App Design · +40% User Engagement",
     "tags": [
       "UX Research",
       "App Design",
@@ -38,7 +38,7 @@ export const PROJECTS = [
     "categories": [
       "ux"
     ],
-    "label": "In Progress",
+    "label": "+40% Engagement",
     "image": "assets/project-02-play-palooza-cover.jpg",
     "href": "work/play-palooza.html"
   },

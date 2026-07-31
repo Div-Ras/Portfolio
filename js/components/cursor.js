@@ -43,10 +43,10 @@ export function mount() {
   // ---- Dotted Outline Imprints ----
   let lastStickerTime = 0;
   const stickerColors = [
-    'rgba(43, 78, 140, 0.50)',   // Royal Blue
-    'rgba(91, 44, 111, 0.45)',   // Deep Purple
-    'rgba(110, 26, 68, 0.42)',   // Burgundy
-    'rgba(59, 82, 132, 0.48)',   // Steel Blue
+    'rgba(37, 82, 165, 0.45)',   // Sapphire Royal Blue
+    'rgba(110, 68, 186, 0.42)',  // Violet Indigo
+    'rgba(138, 155, 232, 0.48)', // Cool Periwinkle / Lavender
+    'rgba(70, 110, 200, 0.40)',  // Ice Blue
   ];
 
   function dropSticker(x, y) {

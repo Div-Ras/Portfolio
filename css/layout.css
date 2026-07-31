@@ -26,16 +26,16 @@ body::after {
   right: 0;
   z-index: var(--z-nav);
   padding: var(--sp-4) 0;
-  background: rgba(250, 246, 240, 0.92);
+  background: rgba(245, 247, 252, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(243, 236, 227, 0.98);
+  background: rgba(235, 240, 249, 0.98);
   border-bottom-color: var(--color-border-h);
-  box-shadow: 0 4px 20px rgba(217, 83, 47, 0.10);
+  box-shadow: 0 4px 20px rgba(37, 82, 165, 0.08);
 }
 .navbar__inner {
   display: flex;

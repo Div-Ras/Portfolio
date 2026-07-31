@@ -23,11 +23,11 @@ export function mount(container) {
 
   // ---- Flowing Blobs ----
   const blobs = [
-    { x: 0.25, y: 0.30, r: 260, color: [43, 78, 140],  alpha: 0.18, phase: 0,    speed: 0.003 },
-    { x: 0.70, y: 0.55, r: 220, color: [91, 44, 111],  alpha: 0.15, phase: 2.1,  speed: 0.004 },
-    { x: 0.55, y: 0.20, r: 180, color: [110, 26, 68],  alpha: 0.13, phase: 4.2,  speed: 0.0035 },
-    { x: 0.35, y: 0.70, r: 200, color: [59, 82, 132],  alpha: 0.12, phase: 1.0,  speed: 0.0025 },
-    { x: 0.80, y: 0.30, r: 160, color: [91, 44, 111],  alpha: 0.10, phase: 3.5,  speed: 0.003 },
+    { x: 0.25, y: 0.30, r: 280, color: [37, 82, 165],  alpha: 0.22, phase: 0,    speed: 0.003 }, // Sapphire Royal Blue
+    { x: 0.70, y: 0.55, r: 240, color: [110, 68, 186], alpha: 0.20, phase: 2.1,  speed: 0.004 }, // Violet Indigo
+    { x: 0.55, y: 0.20, r: 200, color: [138, 155, 232], alpha: 0.18, phase: 4.2,  speed: 0.0035 }, // Periwinkle Lavender
+    { x: 0.35, y: 0.70, r: 220, color: [70, 110, 200], alpha: 0.16, phase: 1.0,  speed: 0.0025 }, // Cool Sky Blue
+    { x: 0.80, y: 0.30, r: 180, color: [120, 85, 210], alpha: 0.15, phase: 3.5,  speed: 0.003 }, // Soft Lavender
   ];
 
   let mouseX = W / 2;

@@ -2,33 +2,33 @@
    DESIGN TOKENS — Royal Blue × Deep Purple × Burgundy Tactile Edition
    ============================================================ */
 :root {
-  /* High-Contrast Palette — Royal Blue, Deep Purple, Burgundy (ZERO RED) */
-  --color-bg:          #FAF7F5;
-  --color-bg-2:        #F2EBE7;
-  --color-bg-card:     rgba(255, 253, 251, 0.94);
-  --color-surface:     #EAE1DC;
-  --color-border:      rgba(43, 78, 140, 0.15);
-  --color-border-h:    rgba(91, 44, 111, 0.45);
+  /* Cool Ethereal Palette — Royal Sapphire, Violet Indigo, Periwinkle Lavender (ZERO WARM TONES) */
+  --color-bg:          #F5F7FC; /* Crisp Ice Pearl Off-White */
+  --color-bg-2:        #EBF0F9; /* Soft Frost Lavender-Blue */
+  --color-bg-card:     #FFFFFF; /* Pure White Card */
+  --color-surface:     #E2E9F6; /* Cool Ice Lavender Tint */
+  --color-border:      rgba(37, 82, 165, 0.14);
+  --color-border-h:    rgba(110, 68, 186, 0.40);
 
-  --color-fg:          #151922; /* Deep Slate Charcoal */
-  --color-muted:       #4B5466;
+  --color-fg:          #121826; /* Deep Cool Slate Charcoal */
+  --color-muted:       #4A5568; /* Muted Cool Slate Subtext */
 
-  --color-accent:      #2B4E8C; /* Royal Blue */
-  --color-accent-d:    #193361;
-  --color-accent-bg:   rgba(43, 78, 140, 0.08);
+  --color-accent:      #2552A5; /* Deep Royal Sapphire Blue */
+  --color-accent-d:    #173875;
+  --color-accent-bg:   rgba(37, 82, 165, 0.08);
 
-  --color-accent-2:    #5B2C6F; /* Deep Purple / Royal Plum */
-  --color-accent-2-d:  #3D1B4C;
-  --color-accent-2-bg: rgba(91, 44, 111, 0.08);
+  --color-accent-2:    #6E44BA; /* Vibrant Ethereal Violet / Indigo */
+  --color-accent-2-d:  #4A2888;
+  --color-accent-2-bg: rgba(110, 68, 186, 0.08);
 
-  --color-accent-3:    #6E1A44; /* Rich Burgundy */
-  --color-accent-3-bg: rgba(110, 26, 68, 0.12);
+  --color-accent-3:    #8A9BE8; /* Luminous Cool Periwinkle / Lavender */
+  --color-accent-3-bg: rgba(138, 155, 232, 0.12);
 
   /* Gradients */
-  --grad-royal:        linear-gradient(135deg, #2B4E8C 0%, #5B2C6F 50%, #6E1A44 100%);
-  --grad-plum-blue:    linear-gradient(135deg, #5B2C6F 0%, #2B4E8C 100%);
-  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #F4ECE7 100%);
-  --grad-soft-bg:      linear-gradient(180deg, #FAF7F5 0%, #F2EBE7 50%, #FAF7F5 100%);
+  --grad-royal:        linear-gradient(135deg, #2552A5 0%, #6E44BA 60%, #8A9BE8 100%);
+  --grad-plum-blue:    linear-gradient(135deg, #6E44BA 0%, #2552A5 100%);
+  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #EEF3FA 100%);
+  --grad-soft-bg:      linear-gradient(180deg, #F5F7FC 0%, #EBF0F9 50%, #F5F7FC 100%);
 
   /* Typography */
   --font-display:   'Bodoni Moda', 'Didot', 'Times New Roman', serif;
