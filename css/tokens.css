@@ -1,34 +1,35 @@
 /* ============================================================
-   DESIGN TOKENS — Royal Blue × Deep Purple × Burgundy Tactile Edition
+   DESIGN TOKENS — Retro Editorial Edition (Sage Green × Deep Navy)
    ============================================================ */
 :root {
-  /* Cool Ethereal Palette — Royal Sapphire, Violet Indigo, Periwinkle Lavender (ZERO WARM TONES) */
-  --color-bg:          #F5F7FC; /* Crisp Ice Pearl Off-White */
-  --color-bg-2:        #EBF0F9; /* Soft Frost Lavender-Blue */
-  --color-bg-card:     #FFFFFF; /* Pure White Card */
-  --color-surface:     #E2E9F6; /* Cool Ice Lavender Tint */
-  --color-border:      rgba(37, 82, 165, 0.14);
-  --color-border-h:    rgba(110, 68, 186, 0.40);
+  /* Warm Retro Light Mode Palette — Deep Navy, Sage Green & Warm Cream */
+  --color-bg:          #F9F6F0; /* Soft Retro Cream / Vanilla Off-White */
+  --color-bg-2:        #F2EDE4; /* Tactile Linen / Parchment Tint */
+  --color-bg-card:     #FFFFFF; /* Pure White Card Surface */
+  --color-surface:     #EAE4D8; /* Muted Warm Cream Surface */
+  --color-border:      rgba(27, 46, 75, 0.12); /* Subtle Deep Navy Outline */
+  --color-border-h:    rgba(82, 115, 91, 0.45); /* Sage Green Hover Accent */
 
-  --color-fg:          #121826; /* Deep Cool Slate Charcoal */
-  --color-muted:       #4A5568; /* Muted Cool Slate Subtext */
+  --color-fg:          #162238; /* Deep Retro Midnight Navy */
+  --color-muted:       #4A586E; /* Muted Slate Navy Subtext */
 
-  --color-accent:      #2552A5; /* Deep Royal Sapphire Blue */
-  --color-accent-d:    #173875;
-  --color-accent-bg:   rgba(37, 82, 165, 0.08);
+  /* Main Accents */
+  --color-accent:      #1B2E4B; /* Deep Classic Navy */
+  --color-accent-d:    #0F1D32;
+  --color-accent-bg:   rgba(27, 46, 75, 0.08);
 
-  --color-accent-2:    #6E44BA; /* Vibrant Ethereal Violet / Indigo */
-  --color-accent-2-d:  #4A2888;
-  --color-accent-2-bg: rgba(110, 68, 186, 0.08);
+  --color-accent-2:    #52735B; /* Sage Green / Botanical Eucalyptus */
+  --color-accent-2-d:  #3B5442;
+  --color-accent-2-bg: rgba(82, 115, 91, 0.10);
 
-  --color-accent-3:    #8A9BE8; /* Luminous Cool Periwinkle / Lavender */
-  --color-accent-3-bg: rgba(138, 155, 232, 0.12);
+  --color-accent-3:    #D47455; /* Retro Terracotta / Warm Amber Accent */
+  --color-accent-3-bg: rgba(212, 116, 85, 0.12);
 
   /* Gradients */
-  --grad-royal:        linear-gradient(135deg, #2552A5 0%, #6E44BA 60%, #8A9BE8 100%);
-  --grad-plum-blue:    linear-gradient(135deg, #6E44BA 0%, #2552A5 100%);
-  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #EEF3FA 100%);
-  --grad-soft-bg:      linear-gradient(180deg, #F5F7FC 0%, #EBF0F9 50%, #F5F7FC 100%);
+  --grad-royal:        linear-gradient(135deg, #1B2E4B 0%, #52735B 60%, #D47455 100%);
+  --grad-plum-blue:    linear-gradient(135deg, #52735B 0%, #1B2E4B 100%);
+  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #F5F1EA 100%);
+  --grad-soft-bg:      linear-gradient(180deg, #F9F6F0 0%, #F2EDE4 50%, #F9F6F0 100%);
 
   /* Typography */
   --font-display:   'Bodoni Moda', 'Didot', 'Times New Roman', serif;
@@ -70,7 +71,7 @@
   --sp-16: 4rem;
   --sp-20: 5rem;
 
-  --section-pad: clamp(3rem, 6vw, 6rem); /* Fluid balanced section spacing */
+  --section-pad: clamp(3rem, 6vw, 6rem);
 
   /* Layout */
   --max-w:    1760px;
@@ -83,11 +84,11 @@
   --radius-lg: 24px;
   --radius-pill: 100px;
 
-  /* Tactile Shadows (Royal Blue & Burgundy) */
-  --shadow-tactile: 0 10px 30px rgba(43, 78, 140, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  --shadow-tactile-btn: 0 6px 20px rgba(43, 78, 140, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  --shadow-card: 0 16px 40px rgba(21, 25, 34, 0.07);
-  --shadow-glow: 0 0 0 2px var(--color-accent), 0 12px 35px rgba(43, 78, 140, 0.25);
+  /* Tactile Shadows (Deep Navy & Sage Green) */
+  --shadow-tactile: 0 10px 30px rgba(27, 46, 75, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --shadow-tactile-btn: 0 6px 20px rgba(27, 46, 75, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --shadow-card: 0 16px 40px rgba(27, 46, 75, 0.06);
+  --shadow-glow: 0 0 0 2px var(--color-accent-2), 0 12px 35px rgba(82, 115, 91, 0.22);
 
   --transition: 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -100,4 +101,3 @@
   --z-overlay: 200;
   --z-cursor:  9999;
 }
-

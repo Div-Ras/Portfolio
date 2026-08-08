@@ -7,7 +7,10 @@
       name="description"
       content="Divya Rastogi | UI/UX Designer based in Brisbane, Australia. Specialising in user research, interaction design, and accessible digital products. Open to opportunities."
     />
-    <title>Divya Rastogi | UI/UX Designer, Brisbane</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/tokens.css" />
@@ -62,113 +65,35 @@
     <!-- ==================== HERO ==================== -->
     <main>
       <section class="hero" data-component="hero">
-        <div class="container hero__content parallax-el" data-speed="2.5">
+        <div class="container hero__content">
           <p class="hero__eyebrow">Brisbane, Queensland, Australia</p>
 
           <div class="hero__name-wrap">
-            <div class="hero__name-halo" aria-hidden="true"></div>
             <h1 class="hero__name">
               Divya<br />
               <span>Rastogi</span>
             </h1>
-
-            <!-- Floating Interactive Badges -->
-            <div class="hero__floating-elements" aria-hidden="true">
-              <span
-                class="hero__badge hero__badge--1 parallax-el"
-                data-speed="4.0"
-                >✦ UI/UX Design</span
-              >
-              <span
-                class="hero__badge hero__badge--2 parallax-el"
-                data-speed="3.2"
-              >
-                | Spatial Design</span
-              >
-            </div>
           </div>
 
           <p class="hero__tagline">
-            <span class="typewriter" data-hero-tagline
-              >Designing spaces and experiences that endure.</span
-            >
+            Designing spaces and digital experiences that endure.
           </p>
           <p class="hero__intro">
             UI/UX Designer with a background in architecture, specialising in
-            user research, interaction design, and accessible digital products.
-            Currently based in Brisbane.
+            user research, interaction design, spatial UX, and accessible digital products.
           </p>
           <div class="hero__ctas">
+            <a href="#selected-work" class="btn btn-primary">View Work</a>
             <a
               href="assets/Divya_Rastogi_Resume.pdf"
               target="_blank"
               rel="noopener"
-              class="btn btn-primary"
+              class="btn btn-outline"
               >Download Resume</a
             >
-            <a href="#selected-work" class="btn btn-outline">View Work</a>
           </div>
         </div>
-        <div class="hero__scroll" aria-hidden="true">
-          <div class="hero__scroll-line"></div>
-          <span>Scroll</span>
-        </div>
       </section>
-
-      <!-- ==================== MARQUEE ==================== -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span class="marquee__item">UX Design</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Architecture</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Human-Centred Design</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Spatial Experience</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Research &amp; Strategy</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Figma</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Prototyping</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">User Research</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Accessibility</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Adobe Creative Cloud</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Design Systems</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Wireframing</span
-          ><span class="marquee__sep">·</span>
-          <!-- duplicate for seamless loop -->
-          <span class="marquee__item">UX Design</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Architecture</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Human-Centred Design</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Spatial Experience</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Research &amp; Strategy</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Figma</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Prototyping</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">User Research</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Accessibility</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Adobe Creative Cloud</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Design Systems</span
-          ><span class="marquee__sep">·</span>
-          <span class="marquee__item">Wireframing</span
-          ><span class="marquee__sep">·</span>
-        </div>
-      </div>
 
       <!-- ==================== SELECTED WORK ==================== -->
       <section class="section" id="selected-work">
@@ -282,24 +207,6 @@
         </div>
       </section>
 
-      <!-- ==================== STATS ==================== -->
-      <section class="section">
-        <div class="container">
-          <div class="stats-grid reveal">
-            <div class="stat">
-              <div class="stat__number">6+</div>
-              <div class="stat__label">Years Experience</div>
-            </div>
-            <div class="stat">
-              <div class="stat__number" data-project-count>20+</div>
-              <div class="stat__label">Projects</div>
-            </div>
-            <div class="stat">
-              <div class="stat__number">3</div>
-              <div class="stat__label">Disciplines</div>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
 

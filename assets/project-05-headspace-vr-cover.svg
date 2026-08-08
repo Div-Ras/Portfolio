@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="vr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9F6F0"/>
+      <stop offset="55%" stop-color="#F2EDE4"/>
+      <stop offset="100%" stop-color="#EAE4D8"/>
+    </linearGradient>
+    <radialGradient id="sage-glow" cx="65%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#52735B" stop-opacity=".22"/>
+      <stop offset="60%" stop-color="#D47455" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#F9F6F0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="navy-sage-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B2E4B"/>
+      <stop offset="50%" stop-color="#52735B"/>
+      <stop offset="100%" stop-color="#D47455"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="url(#vr-bg)"/>
+  <rect width="1600" height="1000" fill="url(#sage-glow)"/>
+
+  <!-- Delicate Grid -->
+  <g fill="none" stroke="#1B2E4B" stroke-opacity=".08" stroke-width="1.5">
+    <line x1="0" y1="200" x2="1600" y2="200"/>
+    <line x1="0" y1="400" x2="1600" y2="400"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="1000"/>
+    <line x1="600" y1="0" x2="600" y2="1000"/>
+    <line x1="900" y1="0" x2="900" y2="1000"/>
+    <line x1="1200" y1="0" x2="1200" y2="1000"/>
+  </g>
+
+  <!-- Spatial VR Geometry Rings -->
+  <g fill="none" stroke="url(#navy-sage-grad)" stroke-width="2.5">
+    <ellipse cx="1080" cy="440" rx="340" ry="150" transform="rotate(-18 1080 440)"/>
+    <ellipse cx="1080" cy="440" rx="270" ry="110" transform="rotate(-18 1080 440)"/>
+    <circle cx="1080" cy="440" r="190" stroke-dasharray="8 12" opacity=".5"/>
+  </g>
+
+  <!-- Floating Sage & Navy Nodes -->
+  <g fill="#52735B" opacity=".85">
+    <circle cx="880" cy="390" r="14"/>
+    <circle cx="1260" cy="360" r="10"/>
+    <circle cx="1060" cy="540" r="16"/>
+    <circle cx="1200" cy="490" r="11"/>
+  </g>
+  <g fill="#1B2E4B" opacity=".8">
+    <circle cx="970" cy="330" r="12"/>
+    <circle cx="1320" cy="440" r="16"/>
+    <circle cx="920" cy="490" r="9"/>
+  </g>
+
+  <!-- Connecting Spatial Lines -->
+  <g fill="none" stroke="#52735B" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="880" y1="390" x2="970" y2="320"/>
+    <line x1="970" y1="320" x2="1260" y2="360"/>
+    <line x1="1260" y1="360" x2="1320" y2="440"/>
+    <line x1="1320" y1="440" x2="1200" y2="490"/>
+    <line x1="1200" y1="490" x2="1060" y2="540"/>
+    <line x1="1060" y1="540" x2="920" y2="490"/>
+    <line x1="920" y1="490" x2="880" y2="380"/>
+  </g>
+
+  <!-- Star Accents -->
+  <text x="860" y="320" fill="#52735B" font-size="28" opacity=".7">✦</text>
+  <text x="1350" y="380" fill="#D47455" font-size="24" opacity=".8">✧</text>
+  <text x="1100" y="600" fill="#1B2E4B" font-size="32" opacity=".6">✦</text>
+
+  <!-- Typography Overlay in Bodoni Moda / Serif style -->
+  <text x="120" y="760" fill="#162238" font-family="'Bodoni Moda', 'Georgia', serif" font-size="88" font-weight="600">Headspace VR</text>
+  <text x="124" y="835" fill="#52735B" font-family="'Inter', sans-serif" font-size="26" font-weight="600" letter-spacing="5">EXTENDED REALITY UX · SPATIAL MINDFULNESS · META QUEST 3S</text>
+</svg>
