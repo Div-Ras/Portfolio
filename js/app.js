@@ -43,6 +43,22 @@ export const PROJECTS = [
     "href": "work/play-palooza.html"
   },
   {
+    "title": "Headspace VR",
+    "subtitle": "DECO7230 · Extended Reality UX · Meta Quest 3s",
+    "tags": [
+      "XR / VR",
+      "Spatial UX",
+      "Usability Research"
+    ],
+    "categories": [
+      "ux", "spatial", "research"
+    ],
+    "label": "Spatial Mindfulness",
+    "image": "assets/project-05-headspace-vr-cover.jpg",
+    "featured": true,
+    "href": "work/headspace-vr.html"
+  },
+  {
     "title": "UNBOUND",
     "subtitle": "QAGOMA Website Redesign · Web Design",
     "tags": [
