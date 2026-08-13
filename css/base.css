@@ -17,11 +17,7 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse at 12% 8%, rgba(37, 82, 165, 0.14), transparent 48%),
-    radial-gradient(ellipse at 88% 18%, rgba(110, 68, 186, 0.12), transparent 48%),
-    radial-gradient(circle at 50% 70%, rgba(138, 155, 232, 0.12), transparent 52%),
-    linear-gradient(180deg, #F5F7FC 0%, #EBF0F9 50%, #F5F7FC 100%);
+  background: var(--color-bg);
   background-color: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-body);

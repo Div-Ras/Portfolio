@@ -1217,36 +1217,32 @@ body::after {
 /* ---- COASTAL EDITORIAL AESTHETIC OVERRIDE ---- */
 body {
   background:
-    radial-gradient(circle at 12% 10%, rgba(138, 165, 184, 0.20), transparent 32%),
-    radial-gradient(circle at 88% 18%, rgba(247, 244, 238, 0.95), transparent 38%),
-    linear-gradient(180deg, #f8f6f1 0%, #eef5f8 48%, #f7f4ee 100%);
-  color: var(--color-text);
+/* ============================================================
+   STRICT PALETTE LAYOUT OVERRIDES (#E6D7C3, #F7EDE2, #F5CAC3, #84A59D, #1A2826)
+   ============================================================ */
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
 
 .navbar {
-  background: rgba(248, 246, 241, 0.78);
-  border-bottom: 1px solid rgba(37, 48, 74, 0.10);
+  background: rgba(247, 237, 226, 0.90);
+  border-bottom: 2.5px solid #1A2826;
   backdrop-filter: blur(18px);
 }
 
 .navbar__link {
-  color: var(--color-text);
-  font-weight: 600;
+  color: #1A2826;
+  font-weight: 700;
 }
 
 .navbar__link.active,
 .navbar__link:hover {
-  color: var(--color-accent);
+  color: #84A59D;
 }
 
 .navbar__link.active::after {
-  background: linear-gradient(90deg, #293c72, #8aa5b8);
-}
-
-.hero {
-  background:
-    linear-gradient(120deg, rgba(255,253,248,0.58), rgba(238,245,248,0.78)),
-    radial-gradient(circle at 50% 18%, rgba(138,165,184,0.18), transparent 34%);
+  background: #84A59D;
 }
 
 .hero__name,
@@ -1256,7 +1252,7 @@ body {
 .project-content__heading,
 .about-story h1,
 .contact-info__email {
-  color: #25304a;
+  color: #1A2826;
 }
 
 .hero__name span,
@@ -1264,139 +1260,44 @@ body {
 .project-content__heading em,
 .project-hero__title em,
 .about-story em {
-  color: #293c72;
+  color: #84A59D;
 }
 
 .hero__tagline,
 .hero__intro,
 .project-card__sub,
 .project-content__body p {
-  color: #4f5d70;
-}
-
-.stats-grid {
-  background: rgba(255, 253, 248, 0.70);
-  border: 1px solid rgba(37, 48, 74, 0.12);
-  box-shadow: 0 30px 90px rgba(37, 48, 74, 0.08);
-}
-
-.stat__number {
-  color: #293c72;
-  text-shadow: 0 10px 30px rgba(41, 60, 114, 0.12);
-}
-
-.stat__label {
-  color: #25304a;
-}
-
-.tag {
-  color: #293c72;
-  background: rgba(41, 60, 114, 0.075);
-  border: 1px solid rgba(41, 60, 114, 0.08);
-}
-
-.project-card {
-  background: rgba(255, 253, 248, 0.78);
-  border: 1px solid rgba(37, 48, 74, 0.10);
-  box-shadow: 0 24px 70px rgba(37, 48, 74, 0.09);
-}
-
-.project-card:hover {
-  box-shadow: 0 34px 90px rgba(37, 48, 74, 0.14);
-}
-
-.project-card__thumb {
-  background: linear-gradient(135deg, #eef4f7, #f8f6f1);
-}
-
-.project-card__overlay {
-  background: rgba(37, 48, 74, 0.56);
-}
-
-.project-card__link,
-.section-label,
-.project-breadcrumb__link {
-  color: #293c72;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #293c72 0%, #526f84 100%);
-  color: #fffdf8;
-  box-shadow: 0 16px 36px rgba(41, 60, 114, 0.18);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, #1f2f5b 0%, #405c72 100%);
-}
-
-.btn-outline {
-  border-color: rgba(41, 60, 114, 0.20);
-  color: #293c72;
-  background: rgba(255, 253, 248, 0.42);
-}
-
-.btn-outline:hover {
-  background: rgba(41, 60, 114, 0.08);
-  border-color: rgba(41, 60, 114, 0.34);
+  color: #2C3E3B;
 }
 
 .footer-simple {
-  background:
-    linear-gradient(180deg, rgba(255,253,248,0.50), rgba(238,245,248,0.75));
-  border-top: 1px solid rgba(37, 48, 74, 0.12);
+  background: #F7EDE2;
+  border-top: 2.5px solid #1A2826;
 }
 
 .footer-simple__col h3 {
-  color: #25304a;
+  color: #1A2826;
 }
 
 .footer-simple__col a:hover {
-  color: #293c72;
-}
-
-.project-cover__img,
-.project-research-frame,
-.project-stage-frame,
-.project-concept-frame,
-.prototype-gallery-frame,
-.play-main-image-frame,
-.play-image-frame {
-  background: rgba(255, 253, 248, 0.62);
-  border: 1px solid rgba(37, 48, 74, 0.12);
-  box-shadow: 0 24px 80px rgba(37, 48, 74, 0.08);
+  color: #84A59D;
 }
 
 .project-overview-table {
-  background: rgba(255, 253, 248, 0.58);
-  border-color: rgba(37, 48, 74, 0.12);
+  background: #FFF;
+  border: 2.5px solid #1A2826;
 }
 
 .project-stat {
-  background: rgba(255, 253, 248, 0.48);
+  background: #F7EDE2;
+  border: 2px solid #1A2826;
 }
 
 .project-stat__value {
-  color: #25304a;
+  color: #1A2826;
 }
 
 .project-stat__label,
 .project-overview-key {
-  color: #526f84;
-}
-
-.img-placeholder {
-  background:
-    radial-gradient(circle at 50% 50%, rgba(41, 60, 114, 0.08), transparent 38%),
-    linear-gradient(135deg, #eef4f7 0%, #fffdf8 100%);
-}
-
-.img-placeholder::before {
-  background:
-    linear-gradient(rgba(41,60,114,0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(41,60,114,0.055) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
-.img-placeholder::after {
-  color: #526f84;
+  color: #84A59D;
 }

@@ -55,4 +55,24 @@ export function renderGrid(grid, projects) {
     const card = createCard({ ...p, num: String(i + 1).padStart(2, '0') });
     grid.appendChild(card);
   });
+
+  const upcomingCard = document.createElement('div');
+  upcomingCard.className = 'project-card';
+  upcomingCard.innerHTML = `
+    <div class="project-card__thumb" style="display: flex; align-items: center; justify-content: center; background: #F4EFE4;">
+      <div style="text-align: center; padding: 20px;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 8px;">✦</span>
+        <span class="tag tag--terracotta" style="font-size: 0.8rem; font-weight: 700;">Coming Soon</span>
+      </div>
+    </div>
+    <div class="project-card__body">
+      <div class="project-card__meta">
+        <span class="project-card__num">Project ${String(projects.length + 1).padStart(2, '0')}</span>
+      </div>
+      <h3 class="project-card__title">More Projects Upcoming</h3>
+      <p class="project-card__sub">Site still in progress &amp; new case studies loading</p>
+      <span class="project-card__link">In Development →</span>
+    </div>
+  `;
+  grid.appendChild(upcomingCard);
 }

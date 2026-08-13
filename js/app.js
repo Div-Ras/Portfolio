@@ -87,6 +87,22 @@ export const PROJECTS = [
     "label": "Systems Thinking",
     "image": "assets/project-04-heritage-cover.jpg",
     "href": "work/heritage-systems-map.html"
+  },
+  {
+    "title": "Architectural Portfolio",
+    "subtitle": "Selected Works · Landscape, Architecture & Fine Arts (Till 2024)",
+    "tags": [
+      "Architecture",
+      "Landscape Design",
+      "Fine Arts"
+    ],
+    "categories": [
+      "spatial", "research"
+    ],
+    "label": "Selected Works",
+    "image": "assets/project-06-architecture-cover.svg",
+    "featured": true,
+    "href": "work/architectural-portfolio.html"
   }
 ];
 
