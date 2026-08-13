@@ -1,22 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
   <defs>
-    <!-- Tactile Cream Background -->
+    <!-- Cream Linen Page Background -->
     <linearGradient id="vr-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9F6F0"/>
-      <stop offset="100%" stop-color="#F2EDE4"/>
+      <stop offset="0%" stop-color="#F7EDE2"/>
+      <stop offset="50%" stop-color="#EFE3D5"/>
+      <stop offset="100%" stop-color="#F7EDE2"/>
     </linearGradient>
 
-    <!-- Illustrative Hard Shadow Filter -->
+    <!-- High Contrast Ink Offset Shadow -->
     <filter id="hard-shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="6" dy="6" stdDeviation="0" flood-color="#162238" flood-opacity="1"/>
+      <feDropShadow dx="6" dy="6" stdDeviation="0" flood-color="#1A2826" flood-opacity="1"/>
     </filter>
   </defs>
 
   <!-- Background -->
   <rect width="1600" height="1000" fill="url(#vr-bg)"/>
 
-  <!-- Illustrative Hand-Sketched Grid Lines -->
-  <g fill="none" stroke="#162238" stroke-opacity=".1" stroke-width="2" stroke-dasharray="8 8">
+  <!-- Spatial Horizon & Grid Lines -->
+  <g fill="none" stroke="#1A2826" stroke-opacity=".12" stroke-width="1.5" stroke-dasharray="6 6">
     <line x1="0" y1="200" x2="1600" y2="200"/>
     <line x1="0" y1="400" x2="1600" y2="400"/>
     <line x1="0" y1="600" x2="1600" y2="600"/>
@@ -27,74 +28,70 @@
     <line x1="1200" y1="0" x2="1200" y2="1000"/>
   </g>
 
-  <!-- Illustrative VR Headset Doodle Frame (Cute & Ballsy) -->
+  <!-- Concentric Spatial Ring Field (Right Side) -->
+  <circle cx="1200" cy="440" r="300" fill="none" stroke="#84A59D" stroke-opacity=".25" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="1200" cy="440" r="220" fill="none" stroke="#E6D7C3" stroke-width="2.5" stroke-dasharray="6 6"/>
+  <circle cx="1200" cy="440" r="140" fill="none" stroke="#F5CAC3" stroke-width="3"/>
+
+  <!-- Sleek Modern VR Headset Line Illustration (Shifted Right) -->
   <g filter="url(#hard-shadow)">
-    <!-- VR Headset Body -->
-    <rect x="920" y="240" width="460" height="260" rx="40" fill="#FFFFFF" stroke="#162238" stroke-width="5"/>
-    <path d="M 980 370 C 1040 430, 1260 430, 1320 370" fill="none" stroke="#162238" stroke-width="5" stroke-linecap="round"/>
+    <!-- VR Headset Enclosure -->
+    <rect x="980" y="310" width="440" height="240" rx="36" fill="#FFFFFF" stroke="#1A2826" stroke-width="4"/>
+    
+    <!-- Visor Contour Line -->
+    <path d="M 1040 450 C 1120 500, 1280 500, 1360 450" fill="none" stroke="#1A2826" stroke-width="4" stroke-linecap="round"/>
 
-    <!-- Dual VR Lenses -->
-    <circle cx="1060" cy="330" r="45" fill="#E4ECE3" stroke="#162238" stroke-width="4"/>
-    <circle cx="1240" cy="330" r="45" fill="#F8E5DF" stroke="#162238" stroke-width="4"/>
-    <circle cx="1060" cy="330" r="20" fill="#1B2E4B"/>
-    <circle cx="1240" cy="330" r="20" fill="#D47455"/>
+    <!-- Dual Optical Lenses -->
+    <circle cx="1110" cy="400" r="48" fill="#F7EDE2" stroke="#1A2826" stroke-width="3.5"/>
+    <circle cx="1290" cy="400" r="48" fill="#F7EDE2" stroke="#1A2826" stroke-width="3.5"/>
+    
+    <circle cx="1110" cy="400" r="26" fill="#84A59D"/>
+    <circle cx="1290" cy="400" r="26" fill="#F5CAC3"/>
 
-    <!-- Headset Strap -->
-    <path d="M 920 330 C 860 330, 840 280, 880 240" fill="none" stroke="#162238" stroke-width="5" stroke-linecap="round"/>
-    <path d="M 1380 330 C 1440 330, 1460 280, 1420 240" fill="none" stroke="#162238" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="1102" cy="392" r="8" fill="#FFFFFF"/>
+    <circle cx="1282" cy="392" r="8" fill="#FFFFFF"/>
+
+    <!-- Headset Straps -->
+    <path d="M 980 400 C 930 400, 910 340, 950 310" fill="none" stroke="#1A2826" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 1420 400 C 1470 400, 1490 340, 1450 310" fill="none" stroke="#1A2826" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Spatial Sensor Nodes -->
+    <circle cx="1010" cy="340" r="7" fill="#1A2826"/>
+    <circle cx="1390" cy="340" r="7" fill="#1A2826"/>
   </g>
 
-  <!-- Cute Illustrative 3D Trees & Nature Doodles (Sage & Terracotta) -->
-  <!-- Tree 1 -->
+  <!-- Interactive Floating Spatial Nodes -->
   <g filter="url(#hard-shadow)">
-    <path d="M 780 580 L 820 460 L 860 580 Z" fill="#52735B" stroke="#162238" stroke-width="4"/>
-    <path d="M 790 520 L 820 420 L 850 520 Z" fill="#749B7E" stroke="#162238" stroke-width="4"/>
-    <rect x="812" y="580" width="16" height="50" rx="4" fill="#162238"/>
+    <!-- Node 1: Sage -->
+    <circle cx="920" cy="220" r="28" fill="#84A59D" stroke="#1A2826" stroke-width="3"/>
+    <text x="920" y="226" fill="#1A2826" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" text-anchor="middle">3D</text>
+
+    <!-- Node 2: Beige -->
+    <circle cx="1460" cy="240" r="32" fill="#E6D7C3" stroke="#1A2826" stroke-width="3"/>
+    <text x="1460" y="246" fill="#1A2826" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" text-anchor="middle">UX</text>
+
+    <!-- Node 3: Pink -->
+    <circle cx="890" cy="560" r="24" fill="#F5CAC3" stroke="#1A2826" stroke-width="3"/>
+    <text x="890" y="565" fill="#1A2826" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" text-anchor="middle">XR</text>
   </g>
 
-  <!-- Tree 2 -->
-  <g filter="url(#hard-shadow)">
-    <circle cx="1000" cy="540" r="55" fill="#D47455" stroke="#162238" stroke-width="4"/>
-    <circle cx="980" cy="520" r="35" fill="#E88B6D" opacity=".6"/>
-    <rect x="992" y="595" width="16" height="55" rx="4" fill="#162238"/>
+  <!-- Connecting Vector Rays -->
+  <line x1="945" y1="235" x2="980" y2="330" stroke="#1A2826" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <line x1="1432" y1="258" x2="1420" y2="330" stroke="#1A2826" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <line x1="910" y1="545" x2="980" y2="480" stroke="#1A2826" stroke-width="2.5" stroke-dasharray="4 4"/>
+
+  <!-- Top Pill Badge (Left Side) -->
+  <g transform="translate(100, 180)" filter="url(#hard-shadow)">
+    <rect x="0" y="0" width="340" height="50" rx="25" fill="#FFF" stroke="#1A2826" stroke-width="3"/>
+    <text x="24" y="32" fill="#1A2826" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="800" letter-spacing="2">✦ SPATIAL UX &amp; MEDITATION</text>
   </g>
 
-  <!-- Tree 3 -->
-  <g filter="url(#hard-shadow)">
-    <path d="M 1160 590 C 1140 480, 1240 480, 1220 590 Z" fill="#8A9BE8" stroke="#162238" stroke-width="4"/>
-    <rect x="1182" y="590" width="16" height="45" rx="4" fill="#162238"/>
-  </g>
+  <!-- Clean Title Layout on Left Side -->
+  <text x="100" y="520" fill="#1A2826" font-family="'Fredoka', 'Playfair Display', serif" font-size="90" font-weight="700">Headspace VR</text>
 
-  <!-- Hand-Drawn Wavy Ground -->
-  <path d="M 700 630 Q 950 660, 1200 630 T 1450 630" fill="none" stroke="#162238" stroke-width="5" stroke-linecap="round"/>
-
-  <!-- Cute Hand-Drawn Stickers & Doodles -->
-  <!-- Flower Sticker -->
-  <g transform="translate(740, 260)" filter="url(#hard-shadow)">
-    <rect x="0" y="0" width="120" height="44" rx="22" fill="#F8E5DF" stroke="#162238" stroke-width="3"/>
-    <text x="18" y="28" fill="#162238" font-family="'Inter', sans-serif" font-size="16" font-weight="700">✿ CREATIVE</text>
-  </g>
-
-  <!-- Spatial Sparkle Sticker -->
-  <g transform="translate(1320, 180)" filter="url(#hard-shadow)">
-    <rect x="0" y="0" width="130" height="44" rx="22" fill="#E4ECE3" stroke="#162238" stroke-width="3"/>
-    <text x="18" y="28" fill="#162238" font-family="'Inter', sans-serif" font-size="16" font-weight="700">✦ SPATIAL VR</text>
-  </g>
-
-  <!-- Hand-drawn Doodle Stars & Swirls -->
-  <text x="730" y="420" fill="#D47455" font-size="36">✹</text>
-  <text x="1420" y="480" fill="#52735B" font-size="42">✦</text>
-  <text x="1100" y="190" fill="#1B2E4B" font-size="32">⚡</text>
-
-  <!-- Hand-drawn Wavy Underline Ribbon for Title -->
-  <path d="M 120 780 Q 400 800, 680 780" fill="none" stroke="#D47455" stroke-width="6" stroke-linecap="round"/>
-
-  <!-- Main Title in Bodoni Moda / Serif with Ink Shadow -->
-  <text x="120" y="740" fill="#162238" font-family="'Bodoni Moda', 'Georgia', serif" font-size="92" font-weight="700">Headspace VR</text>
-
-  <!-- Subtitle Pill Tag -->
-  <g transform="translate(120, 810)" filter="url(#hard-shadow)">
-    <rect x="0" y="0" width="760" height="52" rx="26" fill="#FFF" stroke="#162238" stroke-width="3"/>
-    <text x="24" y="34" fill="#162238" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" letter-spacing="3">DECO7230 · EXTENDED REALITY UX · META QUEST 3S</text>
+  <!-- Bottom Subtitle Banner Pill (Positioned Cleanly at y=700 with Ample Clearance) -->
+  <g transform="translate(100, 700)" filter="url(#hard-shadow)">
+    <rect x="0" y="0" width="720" height="54" rx="27" fill="#84A59D" stroke="#1A2826" stroke-width="3"/>
+    <text x="26" y="35" fill="#1A2826" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800" letter-spacing="2">EXTENDED REALITY · SPATIAL DESIGN · META QUEST 3S</text>
   </g>
 </svg>
