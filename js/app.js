@@ -54,7 +54,7 @@ export const PROJECTS = [
       "ux", "spatial", "research"
     ],
     "label": "Spatial Mindfulness",
-    "image": "assets/project-05-headspace-vr-cover.svg",
+    "image": "assets/project-05-headspace-vr-cover.png",
     "featured": true,
     "href": "work/headspace-vr.html"
   },
