@@ -4,77 +4,82 @@
    ============================================================ */
 :root {
   /* Strict User Palette: Warm Beige, Cream Linen, Blush Pink, Muted Sage Green, Deep Ink */
-  --color-beige:       #E6D7C3; /* Soft Warm Tactile Sand Beige */
-  --color-cream:       #F7EDE2; /* Warm Off-White / Cream Linen */
-  --color-pink:        #F5CAC3; /* Soft Blush Pink / Rose Quartz */
-  --color-sage:        #84A59D; /* Muted Sage Green / Eucalyptus */
+  --color-beige: #c7d2e4;
+  --color-cream: #f6f8fc;
+  --color-pink: #ddd9ed;
+  --color-sage: #aebdd5;
 
   /* High-Contrast WCAG 2.1 AA Ink Foreground */
-  --color-bg:          #F7EDE2; /* Warm Cream Linen Page Background */
-  --color-bg-2:        #EFE3D5; /* Subtle Warm Linen Accent */
-  --color-bg-card:     #FFFFFF; /* Pure White Card Surface (High Contrast) */
-  --color-surface:     #E6D7C3; /* Soft Warm Beige Surface */
+  --color-bg: #f6f8fc;
+  --color-bg-2: #eaf0f7;
+  --color-bg-card: #fcfdff;
+  --color-surface: #e3eaf3;
 
-  --color-ink:         #1A2826; /* Deep Charcoal Pine Ink (12:1 WCAG AA Contrast) */
-  --color-border:      #1A2826; /* Solid Ink Stroke */
-  --color-border-h:    #84A59D; /* Sage Hover Accent */
+  --color-ink: #29364d;
+  --color-border: rgba(41, 54, 77, 0.14);
+  --color-border-h: #8498bc;
 
-  --color-fg:          #1A2826; /* High-Contrast Text */
-  --color-muted:       #3A4E4B; /* Razor-Sharp Subtext (7:1 Contrast) */
+  --color-fg: #29364d;
+  --color-muted: #68758b;
 
   /* Main Accents strictly mapped to palette */
-  --color-accent:      #84A59D; /* Muted Sage Green */
-  --color-accent-d:    #1A2826;
-  --color-accent-bg:   #84A59D;
+  --color-accent: #7185aa;
+  --color-accent-d: #4c6085;
+  --color-accent-bg: #c7d2e4;
 
-  --color-accent-2:    #E6D7C3; /* Warm Tactile Beige */
-  --color-accent-2-d:  #1A2826;
-  --color-accent-2-bg: #E6D7C3;
+  --color-accent-2: #aebdd5;
+  --color-accent-2-d: #536985;
+  --color-accent-2-bg: #e3eaf3;
 
-  --color-accent-3:    #F5CAC3; /* Blush Pink */
-  --color-accent-3-bg: #F5CAC3;
+  --color-accent-3: #c9c4e2;
+  --color-accent-3-bg: #e8e7f3;
 
   /* Gradients strictly mapped */
-  --grad-royal:        linear-gradient(135deg, #E6D7C3 0%, #84A59D 50%, #F5CAC3 100%);
-  --grad-plum-blue:    linear-gradient(135deg, #84A59D 0%, #E6D7C3 100%);
-  --grad-tactile-card: linear-gradient(145deg, #FFFFFF 0%, #F7EDE2 100%);
-  --grad-soft-bg:      linear-gradient(180deg, #F7EDE2 0%, #EFE3D5 50%, #F7EDE2 100%);
+  --grad-royal: linear-gradient(135deg, #e6d7c3 0%, #84a59d 50%, #f5cac3 100%);
+  --grad-plum-blue: linear-gradient(135deg, #84a59d 0%, #e6d7c3 100%);
+  --grad-tactile-card: linear-gradient(145deg, #ffffff 0%, #f7ede2 100%);
+  --grad-soft-bg: linear-gradient(
+    180deg,
+    #f7ede2 0%,
+    #efe3d5 50%,
+    #f7ede2 100%
+  );
 
   /* Typography */
-  --font-display:   'Fredoka', 'Playfair Display', serif;
-  --font-hand:      'Shantell Sans', cursive;
-  --font-body:      'Plus Jakarta Sans', -apple-system, sans-serif;
-  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-hand: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
 
-  --fs-xs:   0.82rem;
-  --fs-sm:   0.98rem;
+  --fs-xs: 0.82rem;
+  --fs-sm: 0.98rem;
   --fs-base: 1.05rem;
-  --fs-md:   1.2rem;
-  --fs-lg:   1.45rem;
-  --fs-xl:   1.85rem;
-  --fs-2xl:  2.3rem;
-  --fs-3xl:  3.2rem;
-  --fs-4xl:  4.5rem;
+  --fs-md: 1.2rem;
+  --fs-lg: 1.45rem;
+  --fs-xl: 1.85rem;
+  --fs-2xl: 2.3rem;
+  --fs-3xl: 3.2rem;
+  --fs-4xl: 4.5rem;
 
-  --fw-light:  400;
+  --fw-light: 400;
   --fw-normal: 500;
   --fw-medium: 600;
-  --fw-semi:   700;
-  --fw-bold:   800;
+  --fw-semi: 700;
+  --fw-bold: 800;
 
-  --lh-tight:  1.1;
-  --lh-snug:   1.3;
+  --lh-tight: 1.1;
+  --lh-snug: 1.3;
   --lh-normal: 1.6;
-  --lh-loose:  1.8;
+  --lh-loose: 1.8;
 
   /* Spacing */
-  --sp-1:  0.25rem;
-  --sp-2:  0.5rem;
-  --sp-3:  0.75rem;
-  --sp-4:  1rem;
-  --sp-5:  1.25rem;
-  --sp-6:  1.5rem;
-  --sp-8:  2rem;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
   --sp-10: 2.5rem;
   --sp-12: 3rem;
   --sp-16: 4rem;
@@ -83,31 +88,31 @@
   --section-pad: clamp(3rem, 6vw, 6rem);
 
   /* Layout */
-  --max-w:    1760px;
+  --max-w: 1760px;
   --max-w-sm: 860px;
-  --gutter:   clamp(1rem, 4vw, 2.5rem);
+  --gutter: clamp(1rem, 4vw, 2.5rem);
 
   /* Border Radius & Hard Ink Shadows */
-  --radius-sm: 8px;
-  --radius:    16px;
-  --radius-lg: 24px;
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-lg: 4px;
   --radius-pill: 9999px;
 
   /* High Contrast Ink Offset Shadows */
-  --shadow-tactile: 4px 4px 0px #1A2826;
-  --shadow-tactile-hover: 7px 7px 0px #1A2826;
-  --shadow-tactile-btn: 4px 4px 0px #1A2826;
-  --shadow-card: 5px 5px 0px #1A2826;
-  --shadow-glow: 6px 6px 0px #84A59D;
+  --shadow-tactile: none;
+  --shadow-tactile-hover: 0 12px 28px rgba(41, 54, 77, 0.07);
+  --shadow-tactile-btn: none;
+  --shadow-card: 0 8px 24px rgba(41, 54, 77, 0.04);
+  --shadow-glow: none;
 
   --transition: 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Z-index */
-  --z-below:  -1;
-  --z-base:    0;
-  --z-above:   10;
-  --z-nav:     100;
+  --z-below: -1;
+  --z-base: 0;
+  --z-above: 10;
+  --z-nav: 100;
   --z-overlay: 200;
-  --z-cursor:  9999;
+  --z-cursor: 9999;
 }

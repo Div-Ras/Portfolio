@@ -59,16 +59,16 @@
   <!-- Upper Left Pill Badge (Wide Pill so Text Never Overlaps) -->
   <g transform="translate(100, 180)" filter="url(#hard-shadow)">
     <rect x="0" y="0" width="370" height="50" rx="25" fill="#F4EFE4" stroke="#16332B" stroke-width="3"/>
-    <text x="24" y="32" fill="#16332B" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" letter-spacing="2">✦ ARCHITECTURE &amp; LANDSCAPE</text>
+    <text x="24" y="32" fill="#16332B" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="400" letter-spacing="1.5">✦ ARCHITECTURE &amp; LANDSCAPE</text>
   </g>
 
   <!-- Main Title (Clean 2-Line Layout on Left side with Zero Overlap) -->
-  <text x="100" y="520" fill="#16332B" font-family="'Bodoni Moda', 'Georgia', serif" font-size="86" font-weight="700">Architectural</text>
-  <text x="100" y="620" fill="#9E8256" font-family="'Bodoni Moda', 'Georgia', serif" font-size="86" font-weight="700" font-style="italic">Portfolio</text>
+  <text x="100" y="520" fill="#16332B" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="86" font-weight="400" letter-spacing="1">Architectural</text>
+  <text x="100" y="620" fill="#9E8256" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="86" font-weight="400" font-style="italic" letter-spacing="1">Portfolio</text>
 
   <!-- Bottom Subtitle Banner Pill (Perfect Width) -->
   <g transform="translate(100, 720)" filter="url(#hard-shadow)">
     <rect x="0" y="0" width="700" height="52" rx="26" fill="#FFF" stroke="#16332B" stroke-width="3"/>
-    <text x="24" y="34" fill="#16332B" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" letter-spacing="2">SELECTED WORKS · LANDSCAPE, ARCHITECTURE &amp; FINE ARTS</text>
+    <text x="24" y="34" fill="#16332B" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400" letter-spacing="1.5">SELECTED WORKS · LANDSCAPE, ARCHITECTURE &amp; FINE ARTS</text>
   </g>
 </svg>
