@@ -73,7 +73,7 @@ body::after {
 }
 .navbar__link:hover,
 .navbar__link.active {
-  color: var(--color-accent);
+  color: var(--color-accent-d);
 }
 .navbar__link::after {
   content: "";
@@ -82,7 +82,7 @@ body::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-accent);
+  background: var(--color-accent-d);
   border-radius: 2px;
   transition: width var(--transition);
 }

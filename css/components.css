@@ -613,7 +613,7 @@
   font-weight: 400;
 }
 .section-heading em {
-  color: var(--color-accent);
+  color: var(--color-accent-d);
   font-weight: 400;
 }
 .section-heading em::after {

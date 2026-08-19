@@ -16,26 +16,27 @@
 
   --color-ink: #14263d;
   --color-border: rgba(20, 38, 61, 0.16);
-  --color-border-h: #22a6a1;
+  --color-border-h: #16706d;
 
   --color-fg: #14263d;
   --color-muted: #5d7084;
+  --color-focus: #3d5f80;
 
   /* Main Accents strictly mapped to palette */
-  --color-accent: #3157d5;
-  --color-accent-d: #233d9c;
-  --color-accent-bg: #cbd7ff;
+  --color-accent: #4f789f;
+  --color-accent-d: #3d5f80;
+  --color-accent-bg: #dcebf7;
 
   --color-accent-2: #22a6a1;
   --color-accent-2-d: #16706d;
   --color-accent-2-bg: #d4f0ee;
 
-  --color-accent-3: #5f78d6;
-  --color-accent-3-bg: #dde4ff;
+  --color-accent-3: #4f789f;
+  --color-accent-3-bg: #e6f1f9;
 
   /* Gradients strictly mapped */
-  --grad-royal: linear-gradient(135deg, #5f78d6 0%, #22a6a1 52%, #3157d5 100%);
-  --grad-plum-blue: linear-gradient(135deg, #22a6a1 0%, #cbd7ff 100%);
+  --grad-royal: linear-gradient(135deg, #4f789f 0%, #22a6a1 52%, #4f789f 100%);
+  --grad-plum-blue: linear-gradient(135deg, #22a6a1 0%, #dcebf7 100%);
   --grad-tactile-card: linear-gradient(145deg, #fbfdff 0%, #d4f0ee 100%);
   --grad-soft-bg: linear-gradient(
     180deg,
