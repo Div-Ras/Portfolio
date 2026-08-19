@@ -652,13 +652,25 @@
   border-color: var(--color-border);
   padding: 0.55rem 0.9rem;
 }
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn:hover:not(.active) {
   color: var(--color-fg);
-  background: var(--color-bg-2);
+  background: var(--color-accent-bg);
   border-color: var(--color-accent);
   transform: none;
   box-shadow: none;
+}
+.filter-btn.active {
+  color: var(--color-cream);
+  background: var(--color-accent);
+  border-color: var(--color-accent-d);
+  font-weight: 600;
+  transform: none;
+  box-shadow: none;
+}
+.filter-btn.active:hover {
+  color: var(--color-cream);
+  background: var(--color-accent-d);
+  border-color: var(--color-accent-d);
 }
 
 .navbar__link--resume {
@@ -669,6 +681,7 @@
 }
 .navbar__link--resume:hover {
   background: var(--color-accent) !important;
+  color: var(--color-cream) !important;
   transform: none !important;
   box-shadow: none !important;
 }
