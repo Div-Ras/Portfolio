@@ -1,48 +1,47 @@
 /* ============================================================
-   DESIGN TOKENS — Strictly Restricted Palette
-   (#E6D7C3 Beige, #F7EDE2 Cream, #F5CAC3 Pink, #84A59D Sage, #1A2826 Ink)
+  DESIGN TOKENS — Navy, Cobalt, Aqua + Periwinkle
    ============================================================ */
 :root {
-  /* Strict User Palette: Warm Beige, Cream Linen, Blush Pink, Muted Sage Green, Deep Ink */
-  --color-beige: #c7d2e4;
-  --color-cream: #f6f8fc;
-  --color-pink: #ddd9ed;
-  --color-sage: #aebdd5;
+  /* Cool, airy base with crisp editorial accents */
+  --color-beige: #b9d7f0;
+  --color-cream: #f4f8fb;
+  --color-pink: #b8e3df;
+  --color-sage: #22a6a1;
 
   /* High-Contrast WCAG 2.1 AA Ink Foreground */
-  --color-bg: #f6f8fc;
-  --color-bg-2: #eaf0f7;
-  --color-bg-card: #fcfdff;
-  --color-surface: #e3eaf3;
+  --color-bg: #edf4f8;
+  --color-bg-2: #dceaf2;
+  --color-bg-card: #fbfdff;
+  --color-surface: #d9e6ef;
 
-  --color-ink: #29364d;
-  --color-border: rgba(41, 54, 77, 0.14);
-  --color-border-h: #8498bc;
+  --color-ink: #14263d;
+  --color-border: rgba(20, 38, 61, 0.16);
+  --color-border-h: #22a6a1;
 
-  --color-fg: #29364d;
-  --color-muted: #68758b;
+  --color-fg: #14263d;
+  --color-muted: #5d7084;
 
   /* Main Accents strictly mapped to palette */
-  --color-accent: #7185aa;
-  --color-accent-d: #4c6085;
-  --color-accent-bg: #c7d2e4;
+  --color-accent: #3157d5;
+  --color-accent-d: #233d9c;
+  --color-accent-bg: #cbd7ff;
 
-  --color-accent-2: #aebdd5;
-  --color-accent-2-d: #536985;
-  --color-accent-2-bg: #e3eaf3;
+  --color-accent-2: #22a6a1;
+  --color-accent-2-d: #16706d;
+  --color-accent-2-bg: #d4f0ee;
 
-  --color-accent-3: #c9c4e2;
-  --color-accent-3-bg: #e8e7f3;
+  --color-accent-3: #5f78d6;
+  --color-accent-3-bg: #dde4ff;
 
   /* Gradients strictly mapped */
-  --grad-royal: linear-gradient(135deg, #e6d7c3 0%, #84a59d 50%, #f5cac3 100%);
-  --grad-plum-blue: linear-gradient(135deg, #84a59d 0%, #e6d7c3 100%);
-  --grad-tactile-card: linear-gradient(145deg, #ffffff 0%, #f7ede2 100%);
+  --grad-royal: linear-gradient(135deg, #5f78d6 0%, #22a6a1 52%, #3157d5 100%);
+  --grad-plum-blue: linear-gradient(135deg, #22a6a1 0%, #cbd7ff 100%);
+  --grad-tactile-card: linear-gradient(145deg, #fbfdff 0%, #d4f0ee 100%);
   --grad-soft-bg: linear-gradient(
     180deg,
-    #f7ede2 0%,
-    #efe3d5 50%,
-    #f7ede2 100%
+    #f4f8fb 0%,
+    #dceaf2 50%,
+    #edf4f8 100%
   );
 
   /* Typography */

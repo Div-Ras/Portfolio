@@ -34,7 +34,7 @@ body::after {
   right: 0;
   z-index: var(--z-nav);
   padding: var(--sp-4) 0;
-  background: rgba(246, 248, 252, 0.95);
+  background: rgba(237, 244, 248, 0.95);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--color-border);
@@ -44,7 +44,7 @@ body::after {
     border-color var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(246, 248, 252, 0.98);
+  background: rgba(237, 244, 248, 0.98);
   border-bottom-color: var(--color-border-h);
   box-shadow: 0 4px 20px rgba(37, 82, 165, 0.08);
 }
