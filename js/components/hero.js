@@ -103,6 +103,15 @@ export function mount(container) {
   }
   draw();
 
+  const visual = container.querySelector(".hero__visual");
+  if (visual) {
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+    visual.addEventListener("click", () => {
+      if (canHover.matches) return;
+      visual.classList.toggle("is-revealed");
+    });
+  }
+
   // Typewriter
   const phrases = [
     'Designing spaces and experiences that endure.',
