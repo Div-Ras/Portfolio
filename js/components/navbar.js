@@ -24,7 +24,7 @@ export function mount() {
     if (
       href === page ||
       (page === "" && href.endsWith("index.html")) ||
-      (inProject && href.endsWith("index.html"))
+      (inProject && href.endsWith("portfolio.html"))
     ) {
       link.classList.add("active");
     }
