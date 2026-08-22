@@ -73,22 +73,57 @@
     <main>
       <section class="hero" data-component="hero">
         <div class="container hero__content">
-          <div class="hero__name-wrap">
-            <h1 class="hero__name">
-              <em>Divya</em><br />
-              <span>&nbsp;Rastogi</span>
-            </h1>
+          <div class="hero__copy">
+            <div class="hero__name-wrap">
+              <h1 class="hero__name">
+                <em>Divya</em><br />
+                <span>&nbsp;Rastogi</span>
+              </h1>
+            </div>
+
+            <p class="hero__tagline">
+              Looking closely. Thinking differently. Creating thoughtfully.
+            </p>
+            <p class="hero__intro">
+              <span class="hero__intro-role">Product designer.</span>
+              Curious about people, technology, culture, and the world around us.<br />
+              Making connections between seemingly different things.<br />
+              Trying to make things a little more thoughtful, a little more considered.
+            </p>
           </div>
 
-          <p class="hero__tagline">
-            Looking closely. Thinking differently. Creating thoughtfully.
-          </p>
-          <p class="hero__intro">
-            <span class="hero__intro-role">Product designer.</span>
-            Curious about people, technology, culture, and the world around us.<br />
-            Making connections between seemingly different things.<br />
-            Trying to make things a little more thoughtful, a little more considered.
-          </p>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__visual-stage">
+              <div class="hero__visual-disc">
+                <img
+                  class="hero__visual-logo"
+                  src="assets/logo.jpg"
+                  alt=""
+                />
+                <img
+                  class="hero__visual-photo"
+                  src="assets/divya-about-photo.jpg"
+                  alt=""
+                />
+              </div>
+              <svg class="hero__visual-frame" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <circle class="hero__visual-ring" cx="50" cy="50" r="47" />
+                <line x1="50" y1="-4" x2="50" y2="7" />
+                <line x1="50" y1="93" x2="50" y2="104" />
+                <line x1="-4" y1="50" x2="7" y2="50" />
+                <line x1="93" y1="50" x2="104" y2="50" />
+                <circle cx="50" cy="3" r="1.15" fill="currentColor" stroke="none" />
+                <circle cx="97" cy="50" r="1.15" fill="currentColor" stroke="none" />
+                <circle cx="50" cy="97" r="1.15" fill="currentColor" stroke="none" />
+                <circle cx="3" cy="50" r="1.15" fill="currentColor" stroke="none" />
+                <circle cx="16.76" cy="16.76" r="0.85" fill="currentColor" stroke="none" />
+                <circle cx="83.24" cy="16.76" r="0.85" fill="currentColor" stroke="none" />
+                <circle cx="83.24" cy="83.24" r="0.85" fill="currentColor" stroke="none" />
+                <circle cx="16.76" cy="83.24" r="0.85" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+          </div>
+
           <div class="hero__ctas">
             <a href="portfolio.html#selected-work" class="btn btn-primary">View Work</a>
           </div>
