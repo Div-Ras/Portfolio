@@ -200,22 +200,29 @@ body::after {
   position: relative;
   overflow: hidden;
   padding-top: 96px;
+  background-color: var(--color-bg);
+  background-image: url("../assets/hero-mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 52% -10%;
 }
 
-/* Blueprint grid handled globally in animations.css */
-/* Radial vignette only */
+/* Five-column wash: faint depth, pale enough for an editorial portfolio */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  display: none;
-  background: radial-gradient(
-    ellipse at 70% 50%,
-    transparent 30%,
-    var(--color-bg) 80%
-  );
   z-index: 1;
   pointer-events: none;
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--color-bg) 30%, transparent) 0%,
+    color-mix(in srgb, var(--color-bg) 46%, transparent) 20%,
+    color-mix(in srgb, var(--color-bg) 70%, transparent) 40%,
+    color-mix(in srgb, var(--color-bg) 76%, transparent) 60%,
+    color-mix(in srgb, var(--color-bg) 52%, transparent) 80%,
+    color-mix(in srgb, var(--color-bg) 30%, transparent) 100%
+  );
 }
 
 .hero__content {
@@ -791,6 +798,10 @@ body::after {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    background-position: 50% 26%;
+  }
+
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -832,6 +843,7 @@ body::after {
     min-height: 85vh;
     padding-top: 100px;
     padding-bottom: var(--sp-12);
+    background-position: 50% 24%;
   }
 
   .hero__copy {
