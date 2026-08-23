@@ -200,22 +200,29 @@ body::after {
   position: relative;
   overflow: hidden;
   padding-top: 96px;
+  background-color: var(--color-bg);
+  background-image: url("../assets/hero-mountain.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 52% -10%;
 }
 
-/* Blueprint grid handled globally in animations.css */
-/* Radial vignette only */
+/* Five-column wash: faint depth, pale enough for an editorial portfolio */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  display: none;
-  background: radial-gradient(
-    ellipse at 70% 50%,
-    transparent 30%,
-    var(--color-bg) 80%
-  );
   z-index: 1;
   pointer-events: none;
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--color-bg) 30%, transparent) 0%,
+    color-mix(in srgb, var(--color-bg) 46%, transparent) 20%,
+    color-mix(in srgb, var(--color-bg) 70%, transparent) 40%,
+    color-mix(in srgb, var(--color-bg) 76%, transparent) 60%,
+    color-mix(in srgb, var(--color-bg) 52%, transparent) 80%,
+    color-mix(in srgb, var(--color-bg) 30%, transparent) 100%
+  );
 }
 
 .hero__content {
@@ -287,7 +294,7 @@ body::after {
   display: block;
   font-style: italic;
   font-weight: 400;
-  color: var(--color-accent);
+  color: var(--color-accent-d);
 }
 
 .hero__tagline {
@@ -307,7 +314,7 @@ body::after {
 
 .hero__intro {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-muted);
   line-height: 1.8;
   max-width: 800px;
@@ -791,6 +798,10 @@ body::after {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    background-position: 50% 50%;
+  }
+
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -832,6 +843,7 @@ body::after {
     min-height: 85vh;
     padding-top: 100px;
     padding-bottom: var(--sp-12);
+    background-position: 50% 50%;
   }
 
   .hero__copy {
@@ -1621,7 +1633,9 @@ body {
   color: var(--color-accent);
 }
 .hero__tagline,
-.hero__intro,
+.hero__intro {
+  color: color-mix(in srgb, var(--color-fg) 82%, white)
+}
 .project-card__sub,
 .project-content__body p {
   color: var(--color-muted);
