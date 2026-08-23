@@ -202,7 +202,7 @@ body::after {
   padding-top: 96px;
   background-color: var(--color-bg);
   background-image: url("../assets/hero-mountain.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 52% -10%;
 }
@@ -294,7 +294,7 @@ body::after {
   display: block;
   font-style: italic;
   font-weight: 400;
-  color: var(--color-accent);
+  color: var(--color-accent-d);
 }
 
 .hero__tagline {
@@ -314,7 +314,7 @@ body::after {
 
 .hero__intro {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-muted);
   line-height: 1.8;
   max-width: 800px;
@@ -799,7 +799,7 @@ body::after {
 
 @media (max-width: 900px) {
   .hero {
-    background-position: 50% 26%;
+    background-position: 50% 50%;
   }
 
   .hero__content {
@@ -843,7 +843,7 @@ body::after {
     min-height: 85vh;
     padding-top: 100px;
     padding-bottom: var(--sp-12);
-    background-position: 50% 24%;
+    background-position: 50% 50%;
   }
 
   .hero__copy {
@@ -1633,7 +1633,9 @@ body {
   color: var(--color-accent);
 }
 .hero__tagline,
-.hero__intro,
+.hero__intro {
+  color: color-mix(in srgb, var(--color-fg) 82%, white)
+}
 .project-card__sub,
 .project-content__body p {
   color: var(--color-muted);
