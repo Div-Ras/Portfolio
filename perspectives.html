@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perspectives | Divya Rastogi</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+    <meta
+      name="description"
+      content="Perspectives — short visual essays and observations by Divya Rastogi on culture, design, people, and the world around us."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/perspectives.css" />
+  </head>
+  <body class="perspectives-page">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="navbar" role="banner">
+      <div class="container navbar__inner">
+        <nav class="navbar__nav" aria-label="Primary navigation">
+          <a href="index.html" class="navbar__link">Home</a>
+          <a href="portfolio.html" class="navbar__link">Portfolio</a>
+          <a href="perspectives.html" class="navbar__link active">Perspectives</a>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+          <a
+            href="assets/Divya_Rastogi_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="navbar__link navbar__link--resume"
+            >Resume</a
+          >
+        </nav>
+        <button
+          class="navbar__hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="navbar__mobile" aria-label="Mobile navigation">
+      <a href="index.html" class="navbar__mobile-link">Home</a>
+      <a href="portfolio.html" class="navbar__mobile-link">Portfolio</a>
+      <a href="perspectives.html" class="navbar__mobile-link">Perspectives</a>
+      <a href="about.html" class="navbar__mobile-link">About</a>
+      <a href="contact.html" class="navbar__mobile-link">Contact</a>
+      <a
+        href="assets/Divya_Rastogi_Resume.pdf"
+        target="_blank"
+        rel="noopener"
+        class="navbar__mobile-link"
+        >Resume</a
+      >
+    </nav>
+
+    <main>
+      <section
+        class="perspectives"
+        data-component="perspectives"
+        aria-labelledby="perspectives-heading"
+      >
+        <header class="perspectives-intro">
+          <h1 id="perspectives-heading" class="section-heading">Perspectives</h1>
+          <p class="perspectives-intro__line">
+            A collection of things worth looking at a little closer.
+          </p>
+        </header>
+
+        <div
+          class="perspectives-gallery"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Perspectives"
+        >
+          <div class="perspectives-viewport" data-embla-viewport>
+            <div class="perspectives-container" data-embla-container></div>
+          </div>
+        </div>
+
+        <div class="perspectives-controls">
+          <button
+            type="button"
+            class="perspectives-nav-btn"
+            data-perspectives-prev
+            aria-label="Previous image"
+          >
+            <span class="perspectives-nav-btn__icon" aria-hidden="true">←</span>
+          </button>
+          <div class="perspectives-dots" data-perspectives-dots></div>
+          <button
+            type="button"
+            class="perspectives-nav-btn"
+            data-perspectives-next
+            aria-label="Next image"
+          >
+            <span class="perspectives-nav-btn__icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <dialog
+      class="perspective-dialog"
+      data-perspective-dialog
+      aria-labelledby="perspective-dialog-title"
+    >
+      <div class="perspective-dialog__inner">
+        <header class="perspective-dialog__header">
+          <h2 id="perspective-dialog-title" class="perspective-dialog__title" data-dialog-title></h2>
+          <button
+            type="button"
+            class="perspective-dialog__close"
+            data-dialog-close
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <figure class="perspective-dialog__figure">
+          <img data-dialog-image alt="" />
+        </figure>
+        <div class="perspective-dialog__body">
+          <p class="perspective-dialog__text" data-dialog-text></p>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="footer footer-simple">
+      <div class="container footer-simple__grid">
+        <div class="footer-simple__col">
+          <h3>Contact Me</h3>
+          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
+        </div>
+        <div class="footer-simple__col">
+          <h3>Let's Connect</h3>
+          <a
+            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="footer-simple__col">
+          <h3>Designed &amp; made by Divya Rastogi</h3>
+          <p>© 2026 Original Work</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

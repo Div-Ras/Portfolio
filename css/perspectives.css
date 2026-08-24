@@ -1,0 +1,337 @@
+/* ============================================================
+   PERSPECTIVES — full-viewport single-image gallery
+   ============================================================ */
+
+.perspectives-page {
+  overflow-x: clip;
+}
+
+.perspectives {
+  --perspectives-nav: 4.75rem;
+  --perspectives-chrome: 10.5rem;
+  --perspectives-stack-gap: clamp(1rem, 4vh, 36px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--perspectives-stack-gap);
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding-top: calc(var(--perspectives-nav) + 0.5rem);
+  padding-bottom: var(--sp-4);
+}
+
+.perspectives-intro {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 var(--gutter);
+  margin: 0;
+}
+
+.perspectives-intro .section-heading {
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #124c83;
+}
+
+.perspectives-intro__line {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-muted);
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.perspectives-gallery {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+  padding: 0 clamp(0.75rem, 2.4vw, 1.75rem);
+}
+
+.perspectives-viewport {
+  overflow: hidden;
+}
+
+.perspectives-container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.perspectives-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.perspectives-slide__btn {
+  display: block;
+  width: min(
+    100%,
+    1680px,
+    calc((100dvh - var(--perspectives-nav) - var(--perspectives-chrome)) * 4)
+  );
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.perspectives-frame {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.perspectives-frame::before {
+  content: "";
+  display: block;
+  padding-top: 25%;
+}
+
+.perspectives-frame img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.perspectives-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  width: min(100%, 40rem);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  flex-shrink: 0;
+}
+
+.perspectives-nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--color-ink);
+  font-size: 1.7rem;
+  line-height: 1;
+  border: 0;
+  background: transparent;
+  transition: color var(--transition);
+}
+
+.perspectives-nav-btn__icon {
+  display: block;
+  line-height: 1;
+  transform: translateY(-0.1em);
+}
+
+.perspectives-nav-btn:hover,
+.perspectives-nav-btn:focus-visible {
+  color: var(--color-accent-2-d);
+}
+
+.perspectives-dots {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.perspectives-dot {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.perspectives-dot::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-border);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.perspectives-dot.is-active::after {
+  background: var(--color-accent-2-d);
+  transform: scale(1.15);
+}
+
+.perspective-dialog {
+  width: min(80vw, calc(100vw - 1.5rem));
+  max-width: min(80vw, calc(100vw - 1.5rem));
+  max-height: 80vh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-card);
+  color: var(--color-fg);
+  box-shadow: 0 28px 70px rgba(20, 38, 61, 0.22);
+  overflow: hidden;
+}
+
+.perspective-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.perspective-dialog::backdrop {
+  background: color-mix(in srgb, var(--color-ink) 52%, transparent);
+}
+
+.perspective-dialog__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 80vh;
+}
+
+.perspective-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  flex-shrink: 0;
+  padding: 1.15rem 0.85rem 1rem 1.45rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.perspective-dialog__title {
+  flex: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  color: #124c83;
+}
+
+.perspective-dialog__close {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: -0.15rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.perspective-dialog__close:hover,
+.perspective-dialog__close:focus-visible {
+  color: var(--color-ink);
+}
+
+.perspective-dialog__figure {
+  position: relative;
+  margin: 0;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: calc(80vh - 13rem);
+  overflow: hidden;
+  background: var(--color-bg-2);
+}
+
+.perspective-dialog__figure img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.perspective-dialog__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.2rem 1.45rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.perspective-dialog__text {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-ink);
+  line-height: 1.85;
+}
+
+@media (orientation: landscape) and (max-height: 560px) {
+  .perspectives {
+    --perspectives-chrome: 8.25rem;
+    --perspectives-stack-gap: clamp(0.75rem, 3vh, 1.25rem);
+    padding-top: calc(var(--perspectives-nav) + 0.2rem);
+  }
+
+  .perspectives-intro .section-heading {
+    font-size: 1.15rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .perspectives-intro__line {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .perspectives-dot {
+    width: 1.85rem;
+    flex-basis: 1.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .perspective-dialog {
+    width: calc(100vw - 1.25rem);
+    max-width: calc(100vw - 1.25rem);
+  }
+
+  .perspective-dialog__header {
+    padding: 1rem 0.55rem 0.85rem 1.1rem;
+  }
+
+  .perspective-dialog__body {
+    padding: 1rem 1.1rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perspectives-dot::after {
+    transition: none;
+  }
+}

@@ -80,6 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroSection = document.querySelector('[data-component="hero"]');
   if (heroSection) mountHero(heroSection);
 
+  const perspectivesSection = document.querySelector(
+    '[data-component="perspectives"]',
+  );
+  if (perspectivesSection) {
+    import("./components/perspectives.js").then(({ mount }) => {
+      mount(perspectivesSection);
+    });
+  }
+
   document.querySelectorAll("[data-project-count]").forEach((el) => {
     el.textContent = "20+";
     el.dataset.count = "20";
