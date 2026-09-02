@@ -440,7 +440,9 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .hero__visual-logo,
   .hero__visual-photo {
-    transition: opacity 0.2s ease, clip-path 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      clip-path 0.2s ease;
   }
 
   .hero__visual.is-revealed .hero__visual-logo,
@@ -1639,7 +1641,7 @@ body {
 }
 .hero__tagline,
 .hero__intro {
-  color: color-mix(in srgb, var(--color-fg) 82%, white)
+  color: color-mix(in srgb, var(--color-fg) 82%, white);
 }
 .project-card__sub,
 .project-content__body p {

@@ -1,0 +1,517 @@
+.label {
+  font:
+    500 11px "DM Mono",
+    monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero {
+  min-height: calc(100vh - 82px);
+  position: relative;
+  padding: 8vh 2vw 15vh;
+}
+.hero-copy {
+  width: 62%;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font:
+    600 clamp(62px, 9.5vw, 132px)/0.84 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.065em;
+  margin: 34px 0 30px;
+}
+.hero h1 .line2 {
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 9vw;
+}
+.hero h1 .line3 {
+  margin-left: 2vw;
+}
+.arrow-word {
+  color: var(--orange);
+  font:
+    500 0.72em "Caveat",
+    cursive;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.intro {
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.6;
+  max-width: 710px;
+  margin: 0;
+}
+.intro em {
+  color: var(--orange);
+  font-style: normal;
+}
+.hero-photo {
+  position: absolute;
+  right: 2vw;
+  top: 10vh;
+  width: min(34vw, 470px);
+  height: min(49vw, 650px);
+  transform: rotate(4deg);
+  z-index: 1;
+}
+.photo-frame {
+  height: 100%;
+  background: #faf8f1;
+  padding: 12px 12px 54px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-caption {
+  position: absolute;
+  bottom: 17px;
+  left: 24px;
+  font:
+    22px "Caveat",
+    cursive;
+}
+.tape {
+  position: absolute;
+  width: 92px;
+  height: 28px;
+  background: rgba(207, 189, 142, 0.66);
+  top: -12px;
+  left: 38%;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+.doodle {
+  position: absolute;
+  font:
+    26px "Caveat",
+    cursive;
+  color: var(--orange);
+}
+.doodle.a {
+  right: 41%;
+  top: 8%;
+  transform: rotate(-8deg);
+}
+.doodle.b {
+  left: 45%;
+  bottom: 12%;
+  transform: rotate(5deg);
+}
+.story {
+  position: relative;
+  padding: 8vh 2vw 16vh;
+  border-top: 1px solid var(--line);
+}
+.story-top {
+  display: grid;
+  grid-template-columns: 27% 73%;
+  gap: 3vw;
+}
+.story-title {
+  font:
+    600 clamp(44px, 5.6vw, 82px)/0.95 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.story-title em {
+  color: var(--orange);
+  font-weight: 500;
+}
+.story-copy {
+  max-width: 760px;
+  font-size: clamp(18px, 1.75vw, 24px);
+  line-height: 1.65;
+  margin: 0;
+}
+.story-copy strong {
+  font-weight: 700;
+}
+.hand-note {
+  font:
+    500 27px/1.2 "Caveat",
+    cursive;
+  max-width: 520px;
+  margin: 42px 0 0 15%;
+  transform: rotate(-2deg);
+}
+.underline {
+  display: inline-block;
+  border-bottom: 2px solid var(--orange);
+}
+.timeline {
+  position: relative;
+  margin-top: 100px;
+  padding-top: 26px;
+  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stage {
+  padding: 0 28px 10px 0;
+  min-height: 190px;
+  border-right: 1px solid var(--line);
+}
+.stage:nth-child(2) {
+  padding-left: 28px;
+}
+.stage:nth-child(3) {
+  padding-left: 28px;
+  border-right: 0;
+}
+.stage .num {
+  font:
+    500 10px "DM Mono",
+    monospace;
+  color: var(--orange);
+  letter-spacing: 0.08em;
+}
+.stage h3 {
+  font:
+    500 clamp(29px, 3.2vw, 46px)/0.95 "Playfair Display",
+    Georgia,
+    serif;
+  margin: 22px 0 13px;
+}
+.stage p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5f5b53;
+  max-width: 330px;
+  margin: 0;
+}
+.tattoo-wrap {
+  position: relative;
+  height: 720px;
+  margin-top: 80px;
+}
+.tattoo-photo {
+  position: absolute;
+  left: 7%;
+  top: 30px;
+  width: min(39vw, 500px);
+  height: 610px;
+  transform: rotate(-5deg);
+}
+.tattoo-photo .photo-frame {
+  padding-bottom: 48px;
+}
+.tattoo-copy {
+  position: absolute;
+  right: 3%;
+  top: 100px;
+  width: 48%;
+  z-index: 2;
+}
+.tattoo-copy .label {
+  margin-bottom: 22px;
+}
+.tattoo-copy h2 {
+  font:
+    600 clamp(46px, 6vw, 86px)/0.9 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+  margin: 0 0 30px;
+}
+.tattoo-copy h2 em {
+  font-style: italic;
+  font-weight: 500;
+}
+.tattoo-copy p {
+  font-size: 19px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+.red-arrow {
+  font:
+    500 30px "Caveat",
+    cursive;
+  color: var(--orange);
+  display: inline-block;
+  transform: rotate(7deg);
+  margin-left: 14px;
+}
+.pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--pink);
+  right: 17%;
+  top: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.hobbies {
+  padding: 7vh 0 14vh;
+  position: relative;
+}
+.hobby-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 18px;
+}
+.hobby-head h2 {
+  font:
+    600 clamp(48px, 6vw, 88px)/0.9 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.hobby-head p {
+  font:
+    500 25px "Caveat",
+    cursive;
+  max-width: 300px;
+  transform: rotate(-2deg);
+  margin: 0 2% 5px 0;
+}
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.9fr 1.05fr;
+  gap: 28px;
+  padding-top: 55px;
+}
+.hobby-card {
+  min-height: 245px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.28);
+  padding: 25px;
+  position: relative;
+}
+.hobby-card:nth-child(2) {
+  transform: rotate(1.5deg);
+  background: rgba(225, 213, 188, 0.24);
+}
+.hobby-card:nth-child(3) {
+  transform: rotate(-1deg);
+  background: rgba(187, 207, 209, 0.2);
+}
+.hobby-card .tiny {
+  font:
+    500 10px "DM Mono",
+    monospace;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hobby-card h3 {
+  font:
+    500 38px/1 "Playfair Display",
+    Georgia,
+    serif;
+  margin: 45px 0 12px;
+}
+.hobby-card p {
+  font: 16px/1.55;
+  margin: 0;
+  max-width: 330px;
+}
+.stamp {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  font:
+    500 9px "DM Mono",
+    monospace;
+  padding: 5px 7px;
+  transform: rotate(8deg);
+}
+.final {
+  position: relative;
+  padding: 12vh 0 16vh;
+  border-top: 1px solid var(--line);
+  min-height: 850px;
+}
+.final-copy {
+  width: 58%;
+  position: relative;
+  z-index: 2;
+}
+.final h2 {
+  font:
+    600 clamp(50px, 7.2vw, 104px)/0.9 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.06em;
+  margin: 30px 0;
+}
+.final h2 em {
+  color: var(--orange);
+  font-style: italic;
+  font-weight: 500;
+}
+.final p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+.portrait {
+  position: absolute;
+  right: 5%;
+  top: 12vh;
+  width: min(36vw, 485px);
+  height: 630px;
+  transform: rotate(3deg);
+}
+.portrait .photo-frame {
+  padding: 13px 13px 58px;
+}
+.portrait img {
+  object-position: center 20%;
+}
+.portrait-caption {
+  position: absolute;
+  bottom: 17px;
+  left: 26px;
+  font:
+    22px "Caveat",
+    cursive;
+}
+.final-doodle {
+  font:
+    28px "Caveat",
+    cursive;
+  color: var(--orange);
+  position: absolute;
+  right: 39%;
+  top: 17%;
+  transform: rotate(-7deg);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 850px) {
+  .site {
+    width: 90vw;
+  }
+  .navlinks {
+    gap: 14px;
+  }
+  .hero {
+    padding-top: 6vh;
+    min-height: auto;
+  }
+  .hero-copy {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 62px;
+  }
+  .hero h1 .line2 {
+    margin-left: 12vw;
+  }
+  .hero-photo {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 65px 3% 0 auto;
+    width: 72vw;
+    height: 92vw;
+    max-height: 610px;
+  }
+  .doodle.a {
+    right: 2%;
+    top: 54%;
+  }
+  .doodle.b {
+    left: 2%;
+    bottom: 2%;
+  }
+  .story-top {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .hand-note {
+    margin-left: 0;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  .stage,
+  .stage:nth-child(2),
+  .stage:nth-child(3) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+    min-height: auto;
+  }
+  .tattoo-wrap {
+    height: auto;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  .tattoo-photo {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 76vw;
+    height: 100vw;
+    max-height: 620px;
+    margin: 0 auto 55px;
+  }
+  .tattoo-copy {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+  }
+  .hobby-head {
+    display: block;
+  }
+  .hobby-head p {
+    margin-top: 22px;
+  }
+  .hobby-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .final {
+    min-height: auto;
+  }
+  .final-copy {
+    width: 100%;
+  }
+  .portrait {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 78vw;
+    height: 105vw;
+    max-height: 650px;
+    margin: 60px auto 0;
+  }
+  .final-doodle {
+    right: 2%;
+    top: 52%;
+  }
+  footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

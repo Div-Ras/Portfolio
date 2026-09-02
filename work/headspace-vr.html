@@ -1,172 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Headspace VR | Extended Reality mindfulness & spatial user experience project by Divya Rastogi (Meta Quest 3s)." />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Headspace VR | Extended Reality mindfulness & spatial user experience project by Divya Rastogi (Meta Quest 3s)."
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
-  <link rel="stylesheet" href="../css/tokens.css" />
-  <link rel="stylesheet" href="../css/base.css" />
-  <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/layout.css" />
-  <link rel="stylesheet" href="../css/animations.css" />
-  <link rel="stylesheet" href="../css/project.css" />
-</head>
-<body id="top">
-<div class="grain" aria-hidden="true"></div>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
+    />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+    <link rel="stylesheet" href="../css/base1.css" />
+  </head>
+  <body id="top">
+    <!-- <div class="grain" aria-hidden="true"></div>
 
-<header class="navbar" role="banner">
-  <div class="container navbar__inner">
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="../index.html" class="navbar__link">Home</a>
-      <a href="../portfolio.html" class="navbar__link active">Portfolio</a>
-      <a href="../about.html" class="navbar__link">About</a>
-      <a href="../contact.html" class="navbar__link">Contact</a>
-      <a href="../assets/Divya_Rastogi_Resume.pdf" target="_blank" rel="noopener" class="navbar__link navbar__link--resume">Resume</a>
-    </nav>
-    <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav class="navbar__mobile" aria-label="Mobile navigation">
-  <a href="../index.html" class="navbar__mobile-link">Home</a>
-  <a href="../portfolio.html" class="navbar__mobile-link">Portfolio</a>
-  <a href="../about.html" class="navbar__mobile-link">About</a>
-  <a href="../contact.html" class="navbar__mobile-link">Contact</a>
-  <a href="../assets/Divya_Rastogi_Resume.pdf" target="_blank" rel="noopener" class="navbar__mobile-link">Resume</a>
-</nav>
-
-<main>
-  <section class="project-breadcrumb">
-    <div class="container">
-      <a href="../portfolio.html#selected-work" class="project-breadcrumb__link"><span class="project-breadcrumb__arrow">←</span> Back to Work</a>
-    </div>
-  </section>
-
-  <section class="project-hero play-feature">
-    <div class="container">
-      <div class="project-hero__meta reveal">
-        <span class="tag tag--terracotta">✿ Spatial UX</span>
-        <span class="tag tag--navy">⚡ Virtual Reality (VR)</span>
-        <span class="tag">✦ Interaction Design</span>
+    <header class="navbar" role="banner">
+      <div class="container navbar__inner">
+        <nav class="navbar__nav" aria-label="Primary navigation">
+          <a href="../index.html" class="navbar__link">Home</a>
+          <a href="../portfolio.html" class="navbar__link active">Work</a>
+          <a href="../about.html" class="navbar__link">About</a>
+          <a href="../contact.html" class="navbar__link">Let's talk ↗</a>
+          <a
+            href="../assets/Divya_Rastogi_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="navbar__link navbar__link--resume"
+            >Resume</a
+          >
+        </nav>
+        <button
+          class="navbar__hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <h1 class="project-hero__title reveal">Headspace VR</h1>
-      <p class="project-hero__sub reveal">Spatial Mindfulness &amp; User-Authored Meditative Sanctuaries in Virtual Reality</p>
-      <p class="project-hero__intro reveal">Headspace VR reimagines traditional screen-based mindfulness applications into a fully immersive, user-authored Virtual Reality experience on the Meta Quest headset. Rather than passively viewing 2D screens, users actively design, curate, and scale their own meditative sanctuaries through 3D spatial object manipulation, ambient wall colour shifting, and spatialized audio.</p>
-      <div class="project-hero__stats reveal">
-        <div class="project-stat"><span class="project-stat__label">Platform</span><span class="project-stat__value">Meta Quest 3s VR</span></div>
-        <div class="project-stat"><span class="project-stat__label">Focus</span><span class="project-stat__value">Spatial Authorship &amp; Wellbeing</span></div>
-        <div class="project-stat"><span class="project-stat__label">Key Interactions</span><span class="project-stat__value">Object Cloning &amp; Ambient Lighting</span></div>
-        <div class="project-stat"><span class="project-stat__label">Methodology</span><span class="project-stat__value">Think-Aloud &amp; SUS Evaluation</span></div>
+    </header>
+    <nav class="navbar__mobile" aria-label="Mobile navigation">
+      <a href="../index.html" class="navbar__mobile-link">Home</a>
+      <a href="../portfolio.html" class="navbar__mobile-link">Portfolio</a>
+      <a href="../about.html" class="navbar__mobile-link">About</a>
+      <a href="../contact.html" class="navbar__mobile-link">Contact</a>
+      <a
+        href="../assets/Divya_Rastogi_Resume.pdf"
+        target="_blank"
+        rel="noopener"
+        class="navbar__mobile-link"
+        >Resume</a
+      >
+    </nav> -->
+
+    <main>
+      <section class="project-breadcrumb">
+        <div class="container">
+          <a
+            href="../portfolio.html#selected-work"
+            class="project-breadcrumb__link"
+            ><span class="project-breadcrumb__arrow">←</span> Back to Work</a
+          >
+        </div>
+      </section>
+
+      <section class="project-hero play-feature">
+        <div class="container">
+          <div class="project-hero__meta reveal">
+            <span class="tag tag--terracotta">✿ Spatial UX</span>
+            <span class="tag tag--navy">⚡ Virtual Reality (VR)</span>
+            <span class="tag">✦ Interaction Design</span>
+          </div>
+          <h1 class="project-hero__title reveal">Headspace VR</h1>
+          <p class="project-hero__sub reveal">
+            Spatial Mindfulness &amp; User-Authored Meditative Sanctuaries in
+            Virtual Reality
+          </p>
+          <p class="project-hero__intro reveal">
+            Headspace VR reimagines traditional screen-based mindfulness
+            applications into a fully immersive, user-authored Virtual Reality
+            experience on the Meta Quest headset. Rather than passively viewing
+            2D screens, users actively design, curate, and scale their own
+            meditative sanctuaries through 3D spatial object manipulation,
+            ambient wall colour shifting, and spatialized audio.
+          </p>
+          <div class="project-hero__stats reveal">
+            <div class="project-stat">
+              <span class="project-stat__label">Platform</span
+              ><span class="project-stat__value">Meta Quest 3s VR</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Focus</span
+              ><span class="project-stat__value"
+                >Spatial Authorship &amp; Wellbeing</span
+              >
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Key Interactions</span
+              ><span class="project-stat__value"
+                >Object Cloning &amp; Ambient Lighting</span
+              >
+            </div>
+            <div class="project-stat">
+              <span class="project-stat__label">Methodology</span
+              ><span class="project-stat__value"
+                >Think-Aloud &amp; SUS Evaluation</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="project-content">
+            <!-- Project Overview Table -->
+            <section class="project-content__body reveal">
+              <h2 class="project-content__heading">
+                Project <em>Snapshot</em>
+              </h2>
+              <div class="project-overview-table">
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Role</span
+                  ><span class="project-overview-val"
+                    >Spatial UX Researcher · VR Interaction Designer</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Domain</span
+                  ><span class="project-overview-val"
+                    >Virtual Reality (VR) · Extended Reality (XR)
+                    Mindfulness</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key"
+                    >Hardware &amp; Platform</span
+                  ><span class="project-overview-val"
+                    >Meta Quest 3s Headset, Unity, C# Interaction Scripts,
+                    Spatial Audio Engine</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Core Affordances</span
+                  ><span class="project-overview-val"
+                    >3D Object Duplication &amp; Resizing, Environmental Wall
+                    Colour Shifting, Theme Drawers, Spatial Audio Record
+                    Player</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Research Methods</span
+                  ><span class="project-overview-val"
+                    >Think-Aloud Protocol, Quest Headset Video Analytics, SUS
+                    Usability Surveys, Qualitative Interviews</span
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- Overview -->
+            <section class="project-content__body reveal" id="overview">
+              <h2 class="project-content__heading">Overview</h2>
+              <p>
+                Traditional mindfulness apps often struggle to deliver deep
+                presence because flat 2D screens remain susceptible to
+                smartphone notifications and cognitive distractions. Headspace
+                VR shifts the paradigm from passive content consumption to
+                active creative authorship. By empowering users to design their
+                own virtual surroundings—populating 3D forests, adjusting room
+                lighting to match breathing rhythms, and controlling spatialized
+                audio—the experience transforms environmental curation into a
+                therapeutic act of mindfulness.
+              </p>
+            </section>
+
+            <!-- Design Challenge -->
+            <section class="project-content__body reveal" id="challenge">
+              <h2 class="project-content__heading">
+                Design <em>Challenge</em>
+              </h2>
+              <div class="project-quote">
+                <p>
+                  "How do you design spatial VR interactions that give users
+                  creative freedom over their environment without increasing
+                  cognitive load during meditation?"
+                </p>
+              </div>
+            </section>
+
+            <!-- Core Mechanics -->
+            <section class="project-content__body reveal" id="mechanics">
+              <h2 class="project-content__heading">
+                Spatial <em>Interactions &amp; Mechanics</em>
+              </h2>
+              <p>
+                Iterative prototyping across three development cycles (IP1 → IP2
+                → IP3) established four core spatial interaction pillars:
+              </p>
+              <ul style="margin-left: 20px; line-height: 1.8; margin-top: 16px">
+                <li>
+                  <strong>1. Spatial Object Duplication &amp; Resizing:</strong>
+                  Grabbing an original 3D natural element (trees, animals,
+                  plants, aquatic life) instantly clones the object into the
+                  user's hands. Users can scale items using two-handed VR
+                  gestures to construct personalized meditative sanctuaries.
+                </li>
+                <li>
+                  <strong>2. Dynamic Environmental Wall Colour Control:</strong>
+                  Mapped to Quest VR controller buttons ("Y" / "A"), users can
+                  cycle room wall colors or pause on soothing cyan tones that
+                  pulse in harmony with guided breathing rhythms.
+                </li>
+                <li>
+                  <strong>3. Theme Drawers &amp; Spatial Audio:</strong>
+                  Physical furniture drawers open smoothly to reveal music
+                  blocks/CDs. Placing a block onto the virtual record player
+                  triggers spatialized audio loops that react to the user's
+                  position in the room.
+                </li>
+                <li>
+                  <strong>4. Natural Object Discard:</strong> Intuitive deletion
+                  mechanics—including a swallowing glow-ball and trash bin—allow
+                  users to curate their space cleanly without disrupting
+                  creative flow.
+                </li>
+              </ul>
+            </section>
+
+            <!-- Research Insights -->
+            <section class="project-content__body reveal" id="evaluation">
+              <h2 class="project-content__heading">
+                Usability <em>Research &amp; Key Insights</em>
+              </h2>
+              <p>
+                Evaluations conducted with participants using the Meta Quest 3s
+                headset demonstrated a meaningful shift in user perception.
+                Rather than asking <em>"What does this button do?"</em>,
+                participants naturally transitioned to asking
+                <em>"What can I create with this?"</em>.
+              </p>
+              <div class="project-overview-table" style="margin-top: 20px">
+                <div class="project-overview-row">
+                  <span class="project-overview-key"
+                    >Duplication Intuitiveness</span
+                  ><span class="project-overview-val"
+                    ><strong>4.3 / 5</strong> · Participants found object
+                    cloning natural, enabling expressive spatial play.</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key"
+                    >Wall Colour Responsiveness</span
+                  ><span class="project-overview-val"
+                    ><strong>4.6 / 5</strong> · Rated as deeply soothing; the
+                    cyan pulse was praised for matching breathing rhythms.</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key"
+                    >Immersion &amp; Calmness</span
+                  ><span class="project-overview-val"
+                    ><strong>4.4 / 5</strong> · Described as "therapeutic",
+                    "personal", and "a space to create peace."</span
+                  >
+                </div>
+                <div class="project-overview-row">
+                  <span class="project-overview-key">Control Mapping</span
+                  ><span class="project-overview-val"
+                    ><strong>4.5 / 5</strong> · Controller inputs were intuitive
+                    to learn and remember effortlessly.</span
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- Industry Relevance -->
+            <section class="project-content__body reveal" id="relevance">
+              <h2 class="project-content__heading">
+                Industry <em>Relevance &amp; Extensions</em>
+              </h2>
+              <p>
+                Headspace VR demonstrates that embodied spatial interaction can
+                directly shape emotional well-being and presence. Grounded in 3D
+                interaction theory (Bowman &amp; Hodges), natural spatial agency
+                reduces cognitive friction and reinforces mindfulness. Future
+                extensions for the framework include AR Mixed Reality
+                passthrough (projecting meditative objects into physical living
+                spaces) and real-time biofeedback integration, where heart rate
+                and breathing automatically tune room atmosphere colors.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Navigation Footer -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <div class="container project-nav__inner project-nav__inner--three">
+          <a class="project-nav__back" href="play-palooza.html">
+            <span class="project-nav__eyebrow">Previous Project</span>
+            <span class="project-nav__label">← Play Palooza</span>
+          </a>
+          <a class="project-nav__top btn btn-outline" href="#top"
+            >Back to Top</a
+          >
+          <a class="project-nav__next" href="unbound.html">
+            <span class="project-nav__eyebrow">Next Project</span>
+            <span class="project-nav__label">UNBOUND →</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <!-- <footer class="footer footer-simple">
+      <div class="container footer-simple__grid">
+        <div class="footer-simple__col">
+          <h3>Contact Me</h3>
+          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>Let's Connect</h3>
+          <a
+            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+
+        <div class="footer-simple__col">
+          <h3>Designed &amp; made by Divya Rastogi</h3>
+          <p>© 2026 Original Work</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </footer> -->
 
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="project-content">
-
-        <!-- Project Overview Table -->
-        <section class="project-content__body reveal">
-          <h2 class="project-content__heading">Project <em>Snapshot</em></h2>
-          <div class="project-overview-table">
-            <div class="project-overview-row"><span class="project-overview-key">Role</span><span class="project-overview-val">Spatial UX Researcher · VR Interaction Designer</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Domain</span><span class="project-overview-val">Virtual Reality (VR) · Extended Reality (XR) Mindfulness</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Hardware &amp; Platform</span><span class="project-overview-val">Meta Quest 3s Headset, Unity, C# Interaction Scripts, Spatial Audio Engine</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Core Affordances</span><span class="project-overview-val">3D Object Duplication &amp; Resizing, Environmental Wall Colour Shifting, Theme Drawers, Spatial Audio Record Player</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Research Methods</span><span class="project-overview-val">Think-Aloud Protocol, Quest Headset Video Analytics, SUS Usability Surveys, Qualitative Interviews</span></div>
-          </div>
-        </section>
-
-        <!-- Overview -->
-        <section class="project-content__body reveal" id="overview">
-          <h2 class="project-content__heading">Overview</h2>
-          <p>Traditional mindfulness apps often struggle to deliver deep presence because flat 2D screens remain susceptible to smartphone notifications and cognitive distractions. Headspace VR shifts the paradigm from passive content consumption to active creative authorship. By empowering users to design their own virtual surroundings—populating 3D forests, adjusting room lighting to match breathing rhythms, and controlling spatialized audio—the experience transforms environmental curation into a therapeutic act of mindfulness.</p>
-        </section>
-
-        <!-- Design Challenge -->
-        <section class="project-content__body reveal" id="challenge">
-          <h2 class="project-content__heading">Design <em>Challenge</em></h2>
-          <div class="project-quote">
-            <p>"How do you design spatial VR interactions that give users creative freedom over their environment without increasing cognitive load during meditation?"</p>
-          </div>
-        </section>
-
-        <!-- Core Mechanics -->
-        <section class="project-content__body reveal" id="mechanics">
-          <h2 class="project-content__heading">Spatial <em>Interactions &amp; Mechanics</em></h2>
-          <p>Iterative prototyping across three development cycles (IP1 → IP2 → IP3) established four core spatial interaction pillars:</p>
-          <ul style="margin-left: 20px; line-height: 1.8; margin-top: 16px;">
-            <li><strong>1. Spatial Object Duplication &amp; Resizing:</strong> Grabbing an original 3D natural element (trees, animals, plants, aquatic life) instantly clones the object into the user's hands. Users can scale items using two-handed VR gestures to construct personalized meditative sanctuaries.</li>
-            <li><strong>2. Dynamic Environmental Wall Colour Control:</strong> Mapped to Quest VR controller buttons ("Y" / "A"), users can cycle room wall colors or pause on soothing cyan tones that pulse in harmony with guided breathing rhythms.</li>
-            <li><strong>3. Theme Drawers &amp; Spatial Audio:</strong> Physical furniture drawers open smoothly to reveal music blocks/CDs. Placing a block onto the virtual record player triggers spatialized audio loops that react to the user's position in the room.</li>
-            <li><strong>4. Natural Object Discard:</strong> Intuitive deletion mechanics—including a swallowing glow-ball and trash bin—allow users to curate their space cleanly without disrupting creative flow.</li>
-          </ul>
-        </section>
-
-        <!-- Research Insights -->
-        <section class="project-content__body reveal" id="evaluation">
-          <h2 class="project-content__heading">Usability <em>Research &amp; Key Insights</em></h2>
-          <p>Evaluations conducted with participants using the Meta Quest 3s headset demonstrated a meaningful shift in user perception. Rather than asking <em>"What does this button do?"</em>, participants naturally transitioned to asking <em>"What can I create with this?"</em>.</p>
-          <div class="project-overview-table" style="margin-top: 20px;">
-            <div class="project-overview-row"><span class="project-overview-key">Duplication Intuitiveness</span><span class="project-overview-val"><strong>4.3 / 5</strong> · Participants found object cloning natural, enabling expressive spatial play.</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Wall Colour Responsiveness</span><span class="project-overview-val"><strong>4.6 / 5</strong> · Rated as deeply soothing; the cyan pulse was praised for matching breathing rhythms.</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Immersion &amp; Calmness</span><span class="project-overview-val"><strong>4.4 / 5</strong> · Described as "therapeutic", "personal", and "a space to create peace."</span></div>
-            <div class="project-overview-row"><span class="project-overview-key">Control Mapping</span><span class="project-overview-val"><strong>4.5 / 5</strong> · Controller inputs were intuitive to learn and remember effortlessly.</span></div>
-          </div>
-        </section>
-
-        <!-- Industry Relevance -->
-        <section class="project-content__body reveal" id="relevance">
-          <h2 class="project-content__heading">Industry <em>Relevance &amp; Extensions</em></h2>
-          <p>Headspace VR demonstrates that embodied spatial interaction can directly shape emotional well-being and presence. Grounded in 3D interaction theory (Bowman &amp; Hodges), natural spatial agency reduces cognitive friction and reinforces mindfulness. Future extensions for the framework include AR Mixed Reality passthrough (projecting meditative objects into physical living spaces) and real-time biofeedback integration, where heart rate and breathing automatically tune room atmosphere colors.</p>
-        </section>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Navigation Footer -->
-  <nav class="project-nav" aria-label="Project navigation">
-    <div class="container project-nav__inner project-nav__inner--three">
-      <a class="project-nav__back" href="play-palooza.html">
-        <span class="project-nav__eyebrow">Previous Project</span>
-        <span class="project-nav__label">← Play Palooza</span>
-      </a>
-      <a class="project-nav__top btn btn-outline" href="#top">Back to Top</a>
-      <a class="project-nav__next" href="unbound.html">
-        <span class="project-nav__eyebrow">Next Project</span>
-        <span class="project-nav__label">UNBOUND →</span>
-      </a>
-    </div>
-  </nav>
-</main>
-
-<footer class="footer footer-simple">
-  <div class="container footer-simple__grid">
-    <div class="footer-simple__col">
-      <h3>Contact Me</h3>
-      <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
-    </div>
-
-    <div class="footer-simple__col">
-      <h3>Let's Connect</h3>
-      <a href="https://www.linkedin.com/in/divya-rastogi-633091a8/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-
-    <div class="footer-simple__col">
-      <h3>Designed &amp; made by Divya Rastogi</h3>
-      <p>© 2026 Original Work</p>
-    </div>
-  </div>
-</footer>
-
-<script type="module" src="../js/app.js"></script>
-</body>
+    <script type="module" src="../js/app.js"></script>
+  </body>
 </html>
