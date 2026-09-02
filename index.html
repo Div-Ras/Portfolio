@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Home | Divya Rastogi</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
+    />
     <meta
       name="description"
       content="Divya Rastogi | UI/UX Designer based in Brisbane, Australia. Specialising in user research, interaction design, and accessible digital products. Open to opportunities."
@@ -13,31 +18,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/tokens.css" />
-    <link rel="stylesheet" href="css/base.css" />
+    <!-- <link rel="stylesheet" href="css/tokens.css" />
+    
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/animations.css" /> -->
+    <link rel="stylesheet" href="css/base1.css" />
+    <link rel="stylesheet" href="css/hero.css" />
   </head>
   <body>
-    <!-- Dynamic glowing spotlight -->
-
-    <!-- Grain overlay -->
-    <div class="grain" aria-hidden="true"></div>
-
-    <!-- NAVBAR -->
-    <header class="navbar" role="banner">
-      <div class="container navbar__inner">
-        <nav class="navbar__nav" aria-label="Primary navigation">
+    <div class="site">
+      <nav>
+        <a class="logo" href="/">Divya.</a>
+        <div class="navlinks">
           <a href="index.html" class="navbar__link active">Home</a>
-          <a href="portfolio.html" class="navbar__link">Portfolio</a>
+          <a href="portfolio.html" class="navbar__link">Work</a>
           <a href="about.html" class="navbar__link">About</a>
-          <a href="contact.html" class="navbar__link">Contact</a>
+          <a href="contact.html" class="navbar__link">Let's talk ↗</a>
           <a
             href="assets/Divya_Rastogi_Resume.pdf"
             target="_blank"
@@ -45,17 +51,19 @@
             class="navbar__link navbar__link--resume"
             >Resume</a
           >
-        </nav>
-        <button
+        </div>
+      </nav>
+      <!-- enable mobile version later -->
+      <!-- <button
           class="navbar__hamburger"
           aria-label="Open menu"
           aria-expanded="false"
         >
           <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-    <nav class="navbar__mobile" aria-label="Mobile navigation">
+        </button> -->
+
+      <!-- enable mobile version later -->
+      <!-- <nav class="navbar__mobile" aria-label="Mobile navigation">
       <a href="index.html" class="navbar__mobile-link">Home</a>
       <a href="portfolio.html" class="navbar__mobile-link">Portfolio</a>
       <a href="about.html" class="navbar__mobile-link">About</a>
@@ -67,94 +75,132 @@
         class="navbar__mobile-link"
         >Resume</a
       >
-    </nav>
+    </nav> -->
 
-    <!-- ==================== HERO ==================== -->
-    <main>
-      <section class="hero" data-component="hero">
-        <div class="container hero__content">
-          <div class="hero__copy">
-            <div class="hero__name-wrap">
-              <h1 class="hero__name">
-                <em>Divya</em><br />
-                <span>&nbsp;Rastogi</span>
-              </h1>
-            </div>
-
-            <p class="hero__tagline">
-              Looking closely. Thinking differently. Creating thoughtfully.
-            </p>
-            <p class="hero__intro">
-              <span class="hero__intro-role">Product designer.</span>
-              Curious about people, technology, culture, and the world around us.<br />
-              Making connections between seemingly different things.<br />
-              Trying to make things a little more thoughtful, a little more considered.
-            </p>
-          </div>
-
-          <div class="hero__visual" aria-hidden="true">
-            <div class="hero__visual-stage">
-              <div class="hero__visual-disc">
-                <img
-                  class="hero__visual-logo"
-                  src="assets/logo.jpg"
-                  alt=""
-                />
-                <img
-                  class="hero__visual-photo"
-                  src="assets/divya-about-photo.jpg"
-                  alt=""
-                />
+      <!-- ==================== HERO ==================== -->
+      <main>
+        <section class="hero" data-component="hero">
+          <div class="container hero__content">
+            <div class="hero__copy">
+              <div class="hero__name-wrap">
+                <h1 class="hero__name logo">
+                  <em>Divya</em><br />
+                  <span>&nbsp;Rastogi</span>
+                </h1>
               </div>
-              <svg class="hero__visual-frame" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                <circle class="hero__visual-ring" cx="50" cy="50" r="47" />
-                <line x1="50" y1="-4" x2="50" y2="7" />
-                <line x1="50" y1="93" x2="50" y2="104" />
-                <line x1="-4" y1="50" x2="7" y2="50" />
-                <line x1="93" y1="50" x2="104" y2="50" />
-                <circle cx="50" cy="3" r="1.15" fill="currentColor" stroke="none" />
-                <circle cx="97" cy="50" r="1.15" fill="currentColor" stroke="none" />
-                <circle cx="50" cy="97" r="1.15" fill="currentColor" stroke="none" />
-                <circle cx="3" cy="50" r="1.15" fill="currentColor" stroke="none" />
-                <circle cx="16.76" cy="16.76" r="0.85" fill="currentColor" stroke="none" />
-                <circle cx="83.24" cy="16.76" r="0.85" fill="currentColor" stroke="none" />
-                <circle cx="83.24" cy="83.24" r="0.85" fill="currentColor" stroke="none" />
-                <circle cx="16.76" cy="83.24" r="0.85" fill="currentColor" stroke="none" />
-              </svg>
+
+              <p class="hero__tagline">
+                Looking closely. Thinking differently. Creating thoughtfully.
+              </p>
+              <p class="hero__intro">
+                <span class="hero__intro-role">Product designer.</span>
+                Curious about people, technology, culture, and the world around
+                us.<br />
+                Making connections between seemingly different things.<br />
+                Trying to make things a little more thoughtful, a little more
+                considered.
+              </p>
             </div>
+
+            <div class="hero__visual" aria-hidden="true">
+              <div class="hero__visual-stage">
+                <div class="hero__visual-disc">
+                  <img class="hero__visual-logo" src="assets/logo.jpg" alt="" />
+                  <img
+                    class="hero__visual-photo"
+                    src="assets/divya-about-photo.jpg"
+                    alt=""
+                  />
+                </div>
+                <svg
+                  class="hero__visual-frame"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle class="hero__visual-ring" cx="50" cy="50" r="47" />
+                  <line x1="50" y1="-4" x2="50" y2="7" />
+                  <line x1="50" y1="93" x2="50" y2="104" />
+                  <line x1="-4" y1="50" x2="7" y2="50" />
+                  <line x1="93" y1="50" x2="104" y2="50" />
+                  <circle
+                    cx="50"
+                    cy="3"
+                    r="1.15"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="97"
+                    cy="50"
+                    r="1.15"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="50"
+                    cy="97"
+                    r="1.15"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="3"
+                    cy="50"
+                    r="1.15"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="16.76"
+                    cy="16.76"
+                    r="0.85"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="83.24"
+                    cy="16.76"
+                    r="0.85"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="83.24"
+                    cy="83.24"
+                    r="0.85"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="16.76"
+                    cy="83.24"
+                    r="0.85"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- <div class="hero__ctas">
+              <a href="portfolio.html#selected-work" class="btn btn-primary"
+                >View Work</a
+              >
+            </div> -->
           </div>
+        </section>
+      </main>
 
-          <div class="hero__ctas">
-            <a href="portfolio.html#selected-work" class="btn btn-primary">View Work</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer footer-simple">
-      <div class="container footer-simple__grid">
-        <div class="footer-simple__col">
-          <h3>Contact Me</h3>
-          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
-        </div>
-
-        <div class="footer-simple__col">
-          <h3>Let's Connect</h3>
-          <a
-            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-        </div>
-
-        <div class="footer-simple__col">
-          <h3>Designed &amp; made by Divya Rastogi</h3>
-          <p>© 2026 Original Work</p>
-        </div>
-      </div>
-    </footer>
+      <!-- ==================== FOOTER ==================== -->
+      <footer>
+        <span>Divya Rastogi / UX + Product Design</span
+        ><span>Brisbane, Australia</span
+        ><a href="mailto:ardivyarastogi@gmail.com"
+          >ardivyarastogi@gmail.com ↗</a
+        >
+      </footer>
+    </div>
 
     <script type="module" src="js/app.js"></script>
   </body>

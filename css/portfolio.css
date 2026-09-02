@@ -1,0 +1,35 @@
+
+/* ---- PROJECT GRID ---- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-6);
+  }
+  
+  @media (max-width: 900px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Featured (large card spanning 2 cols) */
+  .project-grid .featured {
+    grid-column: span 2;
+  }
+  .project-grid .featured .project-card__thumb {
+    aspect-ratio: 16/7;
+  }
+  
+  @media (max-width: 900px) {
+    .project-grid .featured {
+      grid-column: span 1;
+    }
+    .project-grid .featured .project-card__thumb {
+      aspect-ratio: 4/3;
+    }
+  }

@@ -1,17 +1,20 @@
 /* Hero — flowing gradient blobs + typewriter tagline */
 export function mount(container) {
+  // disabling moving blobs for now
+  return;
   if (!container) return;
 
   // Canvas — sits behind all text content
-  let canvas = container.querySelector('.hero-canvas');
+  let canvas = container.querySelector(".hero-canvas");
   if (!canvas) {
-    canvas = document.createElement('canvas');
-    canvas.className = 'hero-canvas';
-    canvas.style.cssText = 'position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;';
+    canvas = document.createElement("canvas");
+    canvas.className = "hero-canvas";
+    canvas.style.cssText =
+      "position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;";
     container.insertBefore(canvas, container.firstChild);
   }
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   let W, H;
 
   function resize() {
@@ -19,15 +22,55 @@ export function mount(container) {
     H = canvas.height = container.clientHeight;
   }
   resize();
-  window.addEventListener('resize', resize);
+  window.addEventListener("resize", resize);
 
   // ---- Flowing Blobs ----
   const blobs = [
-    { x: 0.25, y: 0.30, r: 280, color: [37, 82, 165],  alpha: 0.22, phase: 0,    speed: 0.003 }, // Sapphire Royal Blue
-    { x: 0.70, y: 0.55, r: 240, color: [110, 68, 186], alpha: 0.20, phase: 2.1,  speed: 0.004 }, // Violet Indigo
-    { x: 0.55, y: 0.20, r: 200, color: [138, 155, 232], alpha: 0.18, phase: 4.2,  speed: 0.0035 }, // Periwinkle Lavender
-    { x: 0.35, y: 0.70, r: 220, color: [70, 110, 200], alpha: 0.16, phase: 1.0,  speed: 0.0025 }, // Cool Sky Blue
-    { x: 0.80, y: 0.30, r: 180, color: [120, 85, 210], alpha: 0.15, phase: 3.5,  speed: 0.003 }, // Soft Lavender
+    {
+      x: 0.25,
+      y: 0.3,
+      r: 280,
+      color: [37, 82, 165],
+      alpha: 0.22,
+      phase: 0,
+      speed: 0.003,
+    }, // Sapphire Royal Blue
+    {
+      x: 0.7,
+      y: 0.55,
+      r: 240,
+      color: [110, 68, 186],
+      alpha: 0.2,
+      phase: 2.1,
+      speed: 0.004,
+    }, // Violet Indigo
+    {
+      x: 0.55,
+      y: 0.2,
+      r: 200,
+      color: [138, 155, 232],
+      alpha: 0.18,
+      phase: 4.2,
+      speed: 0.0035,
+    }, // Periwinkle Lavender
+    {
+      x: 0.35,
+      y: 0.7,
+      r: 220,
+      color: [70, 110, 200],
+      alpha: 0.16,
+      phase: 1.0,
+      speed: 0.0025,
+    }, // Cool Sky Blue
+    {
+      x: 0.8,
+      y: 0.3,
+      r: 180,
+      color: [120, 85, 210],
+      alpha: 0.15,
+      phase: 3.5,
+      speed: 0.003,
+    }, // Soft Lavender
   ];
 
   let mouseX = W / 2;
@@ -36,7 +79,7 @@ export function mount(container) {
   let targetMY = mouseY;
   let time = 0;
 
-  window.addEventListener('mousemove', e => {
+  window.addEventListener("mousemove", (e) => {
     const rect = container.getBoundingClientRect();
     if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
       targetMX = e.clientX - rect.left;
@@ -60,7 +103,7 @@ export function mount(container) {
       // Organic drift — each blob orbits its home position
       const drift = time * b.speed + b.phase;
       const bx = (b.x + Math.sin(drift) * 0.08 + (mx - 0.5) * 0.12) * W;
-      const by = (b.y + Math.cos(drift * 0.7) * 0.06 + (my - 0.5) * 0.10) * H;
+      const by = (b.y + Math.cos(drift * 0.7) * 0.06 + (my - 0.5) * 0.1) * H;
 
       // Breathing radius
       const br = b.r + Math.sin(drift * 1.3) * 30;
@@ -81,7 +124,7 @@ export function mount(container) {
     // Subtle flowing contour lines — architectural feel
     ctx.save();
     ctx.globalAlpha = 0.06;
-    ctx.strokeStyle = 'rgba(43, 78, 140, 1)';
+    ctx.strokeStyle = "rgba(43, 78, 140, 1)";
     ctx.lineWidth = 0.8;
 
     for (let i = 0; i < 4; i++) {
@@ -89,9 +132,10 @@ export function mount(container) {
       ctx.beginPath();
       for (let x = 0; x <= W; x += 8) {
         const yBase = H * (0.3 + i * 0.15);
-        const wave = Math.sin(x * 0.006 + offset) * 40
-                   + Math.sin(x * 0.003 + offset * 0.7) * 25
-                   + (mx - 0.5) * 30;
+        const wave =
+          Math.sin(x * 0.006 + offset) * 40 +
+          Math.sin(x * 0.003 + offset * 0.7) * 25 +
+          (mx - 0.5) * 30;
         if (x === 0) ctx.moveTo(x, yBase + wave);
         else ctx.lineTo(x, yBase + wave);
       }
@@ -114,20 +158,20 @@ export function mount(container) {
 
   // Typewriter
   const phrases = [
-    'Designing spaces and experiences that endure.',
-    'Where architecture meets human-centred design.',
-    'Creating thoughtful, purposeful environments.',
-    'Bridging the built world with digital experience.',
+    "Designing spaces and experiences that endure.",
+    "Where architecture meets human-centred design.",
+    "Creating thoughtful, purposeful environments.",
+    "Bridging the built world with digital experience.",
   ];
 
-  const taglineEl = container.querySelector('[data-hero-tagline]');
+  const taglineEl = container.querySelector("[data-hero-tagline]");
   if (!taglineEl) return;
 
-  taglineEl.textContent = '';
+  taglineEl.textContent = "";
   let index = 0;
   let charIdx = 0;
   let deleting = false;
-  let current = '';
+  let current = "";
 
   function type() {
     const target = phrases[index];
@@ -151,4 +195,3 @@ export function mount(container) {
 
   setTimeout(type, 600);
 }
-

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Divya Rastogi</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
+    />
     <meta
       name="description"
       content="Selected portfolio work and design methodology by Divya Rastogi, UX designer based in Brisbane, Australia."
@@ -13,29 +16,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/tokens.css" />
-    <link rel="stylesheet" href="css/base.css" />
+
+    <link rel="stylesheet" href="css/base1.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <!-- <link rel="stylesheet" href="css/layout.css" /> -->
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <!-- <link rel="stylesheet" href="css/animations.css" /> -->
   </head>
   <body>
-    <!-- Grain overlay -->
-    <div class="grain" aria-hidden="true"></div>
-
-    <!-- NAVBAR -->
-    <header class="navbar" role="banner">
-      <div class="container navbar__inner">
-        <nav class="navbar__nav" aria-label="Primary navigation">
-          <a href="index.html" class="navbar__link">Home</a>
-          <a href="portfolio.html" class="navbar__link active">Portfolio</a>
+    <div class="site">
+      <nav>
+        <a class="logo" href="/">Divya.</a>
+        <div class="navlinks">
+          <a href="index.html" class="navbar__link active">Home</a>
+          <a href="portfolio.html" class="navbar__link">Work</a>
           <a href="about.html" class="navbar__link">About</a>
-          <a href="contact.html" class="navbar__link">Contact</a>
+          <a href="contact.html" class="navbar__link">Let's talk ↗</a>
           <a
             href="assets/Divya_Rastogi_Resume.pdf"
             target="_blank"
@@ -43,8 +49,9 @@
             class="navbar__link navbar__link--resume"
             >Resume</a
           >
-        </nav>
-        <button
+        </div>
+      </nav>
+      <!-- <button
           class="navbar__hamburger"
           aria-label="Open menu"
           aria-expanded="false"
@@ -65,139 +72,124 @@
         class="navbar__mobile-link"
         >Resume</a
       >
-    </nav>
+    </nav> -->
 
-    <main>
-      <!-- ==================== SELECTED WORK ==================== -->
-      <section
-        class="section"
-        id="selected-work"
-        style="padding-top: calc(60px + 3rem)"
-      >
-        <div class="container">
-          <p class="section-label reveal">Selected Portfolio Work</p>
-          <div style="margin-bottom: var(--sp-8)">
-            <h2 class="section-heading reveal" style="margin-bottom: 0">
-              Featured <em>Projects</em>
-            </h2>
+      <main>
+        <!-- ==================== SELECTED WORK ==================== -->
+        <section
+          class="section"
+          id="selected-work"
+          style="padding-top: calc(60px + 3rem)"
+        >
+          <div class="container">
+            <p class="section-label reveal">Selected Portfolio Work</p>
+            <div style="margin-bottom: var(--sp-8)">
+              <h2 class="section-heading reveal" style="margin-bottom: 0">
+                Featured <em>Projects</em>
+              </h2>
+            </div>
+
+            <!-- Interactive Filter Bar -->
+            <div class="filter-bar reveal">
+              <button class="filter-btn active" data-filter="all">
+                All Work
+              </button>
+              <button class="filter-btn" data-filter="ux">
+                UX &amp; Products
+              </button>
+              <button class="filter-btn" data-filter="spatial">
+                Spatial &amp; Architecture
+              </button>
+              <button class="filter-btn" data-filter="research">
+                HCI &amp; Systems
+              </button>
+            </div>
+
+            <div class="project-grid" data-component="project-grid"></div>
           </div>
+        </section>
 
-          <!-- Interactive Filter Bar -->
-          <div class="filter-bar reveal">
-            <button class="filter-btn active" data-filter="all">
-              All Work
-            </button>
-            <button class="filter-btn" data-filter="ux">
-              UX &amp; Products
-            </button>
-            <button class="filter-btn" data-filter="spatial">
-              Spatial &amp; Architecture
-            </button>
-            <button class="filter-btn" data-filter="research">
-              HCI &amp; Systems
-            </button>
+        <!-- ==================== DESIGN PROCESS ==================== -->
+        <section class="section" id="process">
+          <div class="container">
+            <p class="section-label reveal">Design Methodology</p>
+            <div style="margin-bottom: var(--sp-8)">
+              <h2 class="section-heading reveal" style="margin-bottom: 0">
+                My <em>Design Process</em>
+              </h2>
+            </div>
+
+            <div class="process-grid reveal">
+              <article class="process-card">
+                <div class="process-card__number">01</div>
+                <h3 class="process-card__title">Research &amp; Context</h3>
+                <p class="process-card__desc">
+                  Uncovering user needs through interviews, observation, and
+                  market analysis to understand the real problem space.
+                </p>
+                <div class="process-card__tags">
+                  <span class="process-tag">Contextual Inquiry</span>
+                  <span class="process-tag">Interviews</span>
+                  <span class="process-tag">Synthesis</span>
+                </div>
+              </article>
+
+              <article class="process-card">
+                <div class="process-card__number">02</div>
+                <h3 class="process-card__title">Structure &amp; Mapping</h3>
+                <p class="process-card__desc">
+                  Translating research findings into clear information
+                  architecture, user journeys, and structural wireframes.
+                </p>
+                <div class="process-card__tags">
+                  <span class="process-tag">Architecture</span>
+                  <span class="process-tag">User Flows</span>
+                  <span class="process-tag">Wireframing</span>
+                </div>
+              </article>
+
+              <article class="process-card">
+                <div class="process-card__number">03</div>
+                <h3 class="process-card__title">Content &amp; Prototyping</h3>
+                <p class="process-card__desc">
+                  Shaping interface language alongside responsive UI layouts,
+                  then validating flows, labels, and interactions through
+                  usability testing.
+                </p>
+                <div class="process-card__tags">
+                  <span class="process-tag">Figma</span>
+                  <span class="process-tag">UX Writing</span>
+                  <span class="process-tag">Usability Testing</span>
+                </div>
+              </article>
+
+              <article class="process-card">
+                <div class="process-card__number">04</div>
+                <h3 class="process-card__title">Systems &amp; Delivery</h3>
+                <p class="process-card__desc">
+                  Building accessible component libraries, ensuring WCAG
+                  compliance, and preparing clean handoff documentation.
+                </p>
+                <div class="process-card__tags">
+                  <span class="process-tag">Design Systems</span>
+                  <span class="process-tag">Accessibility</span>
+                  <span class="process-tag">Handoff</span>
+                </div>
+              </article>
+            </div>
           </div>
+        </section>
+      </main>
 
-          <div class="project-grid" data-component="project-grid"></div>
-        </div>
-      </section>
-
-      <!-- ==================== DESIGN PROCESS ==================== -->
-      <section class="section" id="process">
-        <div class="container">
-          <p class="section-label reveal">Design Methodology</p>
-          <div style="margin-bottom: var(--sp-8)">
-            <h2 class="section-heading reveal" style="margin-bottom: 0">
-              My <em>Design Process</em>
-            </h2>
-          </div>
-
-          <div class="process-grid reveal">
-            <article class="process-card">
-              <div class="process-card__number">01</div>
-              <h3 class="process-card__title">Research &amp; Context</h3>
-              <p class="process-card__desc">
-                Uncovering user needs through interviews, observation, and
-                market analysis to understand the real problem space.
-              </p>
-              <div class="process-card__tags">
-                <span class="process-tag">Contextual Inquiry</span>
-                <span class="process-tag">Interviews</span>
-                <span class="process-tag">Synthesis</span>
-              </div>
-            </article>
-
-            <article class="process-card">
-              <div class="process-card__number">02</div>
-              <h3 class="process-card__title">Structure &amp; Mapping</h3>
-              <p class="process-card__desc">
-                Translating research findings into clear information
-                architecture, user journeys, and structural wireframes.
-              </p>
-              <div class="process-card__tags">
-                <span class="process-tag">Architecture</span>
-                <span class="process-tag">User Flows</span>
-                <span class="process-tag">Wireframing</span>
-              </div>
-            </article>
-
-            <article class="process-card">
-              <div class="process-card__number">03</div>
-              <h3 class="process-card__title">Content &amp; Prototyping</h3>
-              <p class="process-card__desc">
-                Shaping interface language alongside responsive UI layouts, then
-                validating flows, labels, and interactions through usability
-                testing.
-              </p>
-              <div class="process-card__tags">
-                <span class="process-tag">Figma</span>
-                <span class="process-tag">UX Writing</span>
-                <span class="process-tag">Usability Testing</span>
-              </div>
-            </article>
-
-            <article class="process-card">
-              <div class="process-card__number">04</div>
-              <h3 class="process-card__title">Systems &amp; Delivery</h3>
-              <p class="process-card__desc">
-                Building accessible component libraries, ensuring WCAG
-                compliance, and preparing clean handoff documentation.
-              </p>
-              <div class="process-card__tags">
-                <span class="process-tag">Design Systems</span>
-                <span class="process-tag">Accessibility</span>
-                <span class="process-tag">Handoff</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer footer-simple">
-      <div class="container footer-simple__grid">
-        <div class="footer-simple__col">
-          <h3>Contact Me</h3>
-          <a href="mailto:ardivyarastogi@gmail.com">ardivyarastogi@gmail.com</a>
-        </div>
-
-        <div class="footer-simple__col">
-          <h3>Let's Connect</h3>
-          <a
-            href="https://www.linkedin.com/in/divya-rastogi-633091a8/"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-        </div>
-
-        <div class="footer-simple__col">
-          <h3>Designed &amp; made by Divya Rastogi</h3>
-          <p>© 2026 Original Work</p>
-        </div>
-      </div>
-    </footer>
+      <!-- ==================== FOOTER ==================== -->
+      <footer>
+        <span>Divya Rastogi / UX + Product Design</span
+        ><span>Brisbane, Australia</span
+        ><a href="mailto:ardivyarastogi@gmail.com"
+          >ardivyarastogi@gmail.com ↗</a
+        >
+      </footer>
+    </div>
 
     <script type="module" src="js/app.js"></script>
   </body>
