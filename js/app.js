@@ -9,6 +9,7 @@ import { mount as mountNavbar } from "./components/navbar.js";
 import { mount as mountHero } from "./components/hero.js";
 import { mount as mountFooter } from "./components/footer.js";
 import { renderGrid } from "./components/project-card.js";
+import { mount as mountSlideWork } from "./components/slide-work.js";
 
 export const PROJECTS = [
   {
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mountCursor();
   mountNavbar();
   mountFooter();
+  mountSlideWork();
 
   const heroSection = document.querySelector('[data-component="hero"]');
   if (heroSection) mountHero(heroSection);
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderGrid(grid, projects);
   }
 
-  const filterBar = document.querySelector(".filter-bar");
+  const filterBar = document.querySelector(".filter-bar, .home-work__filters");
   if (filterBar && grid) {
     filterBar.addEventListener("click", (e) => {
       const btn = e.target.closest(".filter-btn");

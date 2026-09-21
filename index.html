@@ -27,18 +27,13 @@
     />
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="css/tokens.css" />
-    
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/animations.css" /> -->
     <link rel="stylesheet" href="css/base1.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/home-work.css" />
   </head>
-  <body>
+  <body class="home-page">
     <div class="site">
-      <nav>
-        <a class="logo" href="/"></a>
+      <nav aria-label="Primary navigation">
         <div class="navlinks">
           <a href="index.html" class="navbar__link active">Home</a>
           <a href="portfolio.html" class="navbar__link">Work</a>
@@ -183,13 +178,32 @@
               </div>
             </div>
 
-            <!-- <div class="hero__ctas">
-              <a href="portfolio.html#selected-work" class="btn btn-primary"
-                >View Work</a
-              >
-            </div> -->
+            <div class="hero__ctas home-hero-cta">
+              <div class="home-work-interaction">
+                <a
+                  href="portfolio.html"
+                  class="home-work-button"
+                  data-slide-work
+                  aria-label="Slide the ball to the dog to view my work"
+                >
+                  <span class="home-work-button__label">VIEW MY WORK</span>
+                  <span class="home-work-button__track" aria-hidden="true">
+                    <span class="home-work-button__path"></span>
+                    <span class="home-work-button__thumb" role="presentation">
+                      <img class="home-work-button__ball" src="assets/interaction/ball.png" alt="" />
+                    </span>
+                    <span class="home-work-button__dog" aria-hidden="true">
+                      <img class="home-work-button__dog-face dog-face--sad" src="assets/interaction/dog-sad.png" alt="" />
+                      <img class="home-work-button__dog-face dog-face--happy" src="assets/interaction/dog-happy.png" alt="" />
+                    </span>
+                  </span>
+                </a>
+                <span class="home-work-hint" aria-hidden="true">Pass my ball! <span>↗</span></span>
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
 
       <!-- ==================== FOOTER ==================== -->
