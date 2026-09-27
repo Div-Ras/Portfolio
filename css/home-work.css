@@ -904,7 +904,7 @@ nav { justify-content: center; }
 }
 
 .home-page .home-work-button {
-  width: min(1240px, 86vw);
+  width: min(800px, 86vw);
   height: 104px;
   min-height: 104px;
   padding: 7px;
